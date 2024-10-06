@@ -1,0 +1,4 @@
+baseURL = 'https://blog.zansavio.site/'
+languageCode = 'en-us'
+title = "Carlos"
+theme = 'mini'
