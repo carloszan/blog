@@ -45,28 +45,28 @@ jobs:
           push: true
           tags: ${{ steps.prep.outputs.tags }}
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v3
       
-      - name: Prepare
-        id: prep
-        run: |
-          DOCKER_IMAGE=${{ secrets.DOCKER_USERNAME }}/${GITHUB_REPOSITORY#*/}
+  #     - name: Prepare
+  #       id: prep
+  #       run: |
+  #         DOCKER_IMAGE=${{ secrets.DOCKER_USERNAME }}/${GITHUB_REPOSITORY#*/}
 
-      - name: Install kubectl
-        uses: azure/setup-kubectl@v4
-        with:
-          version: 'v1.29.6+k3s2'
-        id: install
+  #     - name: Install kubectl
+  #       uses: azure/setup-kubectl@v4
+  #       with:
+  #         version: 'v1.29.6+k3s2'
+  #       id: install
 
-      - name: Load kubeconfig
-        run: echo "$KUBECONFIG" > $HOME/.kube/config
-        env:
-          KUBECONFIG: ${{ secrets.KUBECONFIG }}
+  #     - name: Load kubeconfig
+  #       run: echo "$KUBECONFIG" > $HOME/.kube/config
+  #       env:
+  #         KUBECONFIG: ${{ secrets.KUBECONFIG }}
 
-      - name: Apply Kubernetes manifests
-        run: kubectl set image blog ${DOCKER_IMAGE}:${GITHUB_SHA}
+  #     - name: Apply Kubernetes manifests
+  #       run: kubectl set image blog ${DOCKER_IMAGE}:${GITHUB_SHA}
