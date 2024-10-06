@@ -58,7 +58,7 @@ jobs:
           DOCKER_IMAGE=${{ secrets.DOCKER_USERNAME }}/${GITHUB_REPOSITORY#*/}
 
       - name: Install kubectl
-      - uses: azure/setup-kubectl@v4
+        uses: azure/setup-kubectl@v4
         with:
           version: '1.29.6'
         id: install
