@@ -47,6 +47,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    depends-on: build
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -57,9 +58,10 @@ jobs:
           DOCKER_IMAGE=${{ secrets.DOCKER_USERNAME }}/${GITHUB_REPOSITORY#*/}
 
       - name: Install kubectl
-        uses: manusa/actions-setup-kubectl@v2
+      - uses: azure/setup-kubectl@v4
         with:
-          kubectl_version: '1.29.6'
+          version: '1.29.6'
+        id: install
 
       - name: Load kubeconfig
         run: echo "$KUBECONFIG" > $HOME/.kube/config
