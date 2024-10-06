@@ -47,7 +47,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    depends-on: build
+    needs: build
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
