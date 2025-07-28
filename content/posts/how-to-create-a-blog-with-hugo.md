@@ -18,9 +18,6 @@ series = ["Theme Demo"]
 aliases = ["migrate-from-jekyl"]
 +++
 
-
-![Blog Pipeline](./Blog.drawio.png)
-
 # Motivation
 here it goes. 
 - test
