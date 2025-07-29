@@ -63,3 +63,10 @@ jobs:
           value: $((${{ secrets.VERSION }}+1))
           repository: carloszan/blog
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
+
+      - name: Make POST request
+        uses: actions/http-request@v1
+        with:
+          url: 'https://api.blog.sjdr.cloud/execute-requests'
+          method: 'POST'
+          headers: '{"api-key": "${{ secrets.BLOG_API_KEY }}"'
