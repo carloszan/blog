@@ -1,4 +1,7 @@
 import httpx
+import os
+
+import logging
 
 create_container_input = {
     "HostConfig": {
@@ -99,46 +102,66 @@ create_container_input = {
 
 
 async def recreate_container_async():
+    portainer_api_key = os.getenv('PORTAINER_API_KEY')
+    portainer_url = os.getenv('PORTAINER_URL')
+
+    if not portainer_api_key:
+        portainer_api_key = 'ptr_iOezwi8bqTba/9jsKUFYYeAFLoO+fIyYYyk1bQD3qT8='
+
+    if not portainer_url:
+        portainer_url = 'https://portainer.home.sjdr.cloud'
+
     results = []
-    headers = {'X-API-Key': 'ptr_iOezwi8bqTba/9jsKUFYYeAFLoO+fIyYYyk1bQD3qT8='}
+
+    headers = {'X-API-Key': portainer_api_key}
 
     async with httpx.AsyncClient() as client:
         client.headers = headers
+        client.base_url = portainer_url
+
         # 1. Delete Container
-        delete_response = await client.delete("https://portainer.home.sjdr.cloud/api/endpoints/4/docker/containers/blog?force=true")
+        logging.info("Deleting container")
+        delete_response = await client.delete("/api/endpoints/4/docker/containers/blog?force=true")
         results.append({
             "request_number": 1,
             "method": "DELETE",
             "status_code": delete_response.status_code,
             "response": delete_response.text
         })
+        logging.info("Deleted container")
 
         # 2. Download Image
-        download_image_response = await client.post("https://portainer.home.sjdr.cloud/api/endpoints/4/docker/images/create?fromImage=carloszan%2Fblog:latest", timeout=None)
+        logging.info("Downloading image")
+        download_image_response = await client.post("/api/endpoints/4/docker/images/create?fromImage=carloszan%2Fblog:latest", timeout=None)
         results.append({
             "request_number": 2,
             "method": "POST",
             "status_code": download_image_response.status_code,
             "response": download_image_response.text
         })
+        logging.info("Downloaded image")
 
         # 3. Create Container
-        create_container_response = await client.post("https://portainer.home.sjdr.cloud/api/endpoints/4/docker/containers/create?name=blog", json=create_container_input)
+        logging.info("Creating container")
+        create_container_response = await client.post("/api/endpoints/4/docker/containers/create?name=blog", json=create_container_input)
         results.append({
             "request_number": 3,
             "method": "POST",
             "status_code": create_container_response.status_code,
             "response": create_container_response.text
         })
+        logging.info("Created container")
 
         # 4. Start Container
+        logging.info("Starting container")
         container_id = create_container_response.json()['Id']
-        start_container_response = await client.post(f"https://portainer.home.sjdr.cloud/api/endpoints/4/docker/containers/{container_id}/start")
+        start_container_response = await client.post(f"/api/endpoints/4/docker/containers/{container_id}/start")
         results.append({
             "request_number": 4,
             "method": "POST",
             "status_code": start_container_response.status_code,
             "response": start_container_response.text
         })
+        logging.info("Started container")
 
         return results
