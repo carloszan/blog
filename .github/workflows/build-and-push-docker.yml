@@ -64,8 +64,8 @@ jobs:
           repository: carloszan/blog
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
 
-      - name: Make POST request
-        uses: actions/http-request@v1
+      - name: Deploy container to environment
+        uses: fjogeleit/http-request-action@v1
         with:
           url: 'https://api.blog.sjdr.cloud/execute-requests'
           method: 'POST'
