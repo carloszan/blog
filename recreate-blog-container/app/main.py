@@ -15,12 +15,13 @@ logging.basicConfig(
 app = FastAPI()
 
 
-@app.post("/execute-requests/")
+@app.post("/execute-requests")
 async def execute_requests(api_key: Annotated[str | None, Header()] = None):
     actual_api_key = os.getenv('GITHUB_ACTION_KEY')
     if not actual_api_key:
         actual_api_key = 'test'
 
+    logging.info(f"Trying with key: {api_key}")
     if api_key != actual_api_key:
         raise HTTPException(
             status_code=404
