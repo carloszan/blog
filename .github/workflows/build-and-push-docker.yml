@@ -69,5 +69,5 @@ jobs:
         with:
           url: 'https://updateblog.sjdr.cloud/execute-requests'
           method: 'POST'
-          headers: '{"api-key": "${{ secrets.BLOG_API_KEY }}"'
+          headers: '{"api-key": "${{ secrets.BLOG_API_KEY }}"}'
           timeout: 45000
