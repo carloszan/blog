@@ -20,4 +20,4 @@ aliases = ["migrate-from-jekyl"]
 
 # Motivation
 here it goes. 
-- pipeline is working
+- uhuuul, it's working as it should1!
