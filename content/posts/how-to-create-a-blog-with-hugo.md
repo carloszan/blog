@@ -20,8 +20,4 @@ aliases = ["migrate-from-jekyl"]
 
 # Motivation
 here it goes. 
-- test
-- worked!!
-- let me test recreating the blog container
-- again
-- now with fastapi
+- pipeline is working
