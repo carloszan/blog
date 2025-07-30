@@ -13,7 +13,7 @@
       <link>http://www.example.com/posts/how-to-create-a-blog-with-hugo/</link>
       <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
       <guid>http://www.example.com/posts/how-to-create-a-blog-with-hugo/</guid>
-      <description>&lt;h1 id=&#34;motivation&#34;&gt;&#xA;  Motivation&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#motivation&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;here it goes.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;uhuuul, it&amp;rsquo;s working as it should1!&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;h1 id=&#34;motivation&#34;&gt;&#xA;  Motivation&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#motivation&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;here it goes.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;this thing is powerful&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Rich Content</title>

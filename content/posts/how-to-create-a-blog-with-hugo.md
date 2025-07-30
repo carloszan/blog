@@ -20,4 +20,4 @@ aliases = ["migrate-from-jekyl"]
 
 # Motivation
 here it goes. 
-- uhuuul, it's working as it should1!
+- this thing is powerful
