@@ -16,6 +16,7 @@ categories = [
 ]
 series = ["Theme Demo"]
 aliases = ["migrate-from-jekyl"]
+draft = "true"
 +++
 
 ## Shortcodes

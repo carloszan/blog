@@ -14,6 +14,7 @@ categories = [
     "syntax",
 ]
 series = ["Theme Demo"]
+draft = "true"
 +++
 
 If you want to use [Mermaid-JS](https://mermaid-js.github.io/mermaid/#/) on your website.

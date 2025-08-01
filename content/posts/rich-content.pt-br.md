@@ -15,6 +15,7 @@ categories = [
     "demonstração do tema",
 ]
 series = ["Demonstração do Tema"]
+draft = "true"
 +++
 
 O Hugo vem com vários [Shortcodes Internos](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) para conteúdo rico, assim como uma [Configuração de Privacidade](https://gohugo.io/about/hugo-and-gdpr/) e uma gama de Shortcodes simples que permitem embutir versões estáticas e sem JS de várias de redes sociais.

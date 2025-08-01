@@ -15,6 +15,7 @@ categories = [
     "demonstração do tema",
 ]
 series = ["Demonstração do Tema"]
+draft = "true"
 +++
 
 O Hugo Coder proporciona alguns Shortcodes Customizados.

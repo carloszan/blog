@@ -15,6 +15,7 @@ categories = [
     "demonstração do tema",
 ]
 series = ["Demonstração do Tema"]
+draft = "true"
 +++
 
 Em um projeto Hugo as Notações Matemáticas podem ser usadas com a ajuda de bibliotecas JavaScript de terceiros.

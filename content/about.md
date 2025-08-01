@@ -1,25 +1,22 @@
 +++
 title = "About"
-description = "Hugo, the world's fastest framework for building websites"
-date = "2019-02-28"
-aliases = ["about-us", "about-hugo", "contact"]
-author = "Hugo Authors"
+description = "Carlos, the engineer"
+date = "2025-08-01"
+aliases = ["about-me", "contact"]
+author = "Carlos Zansavio"
 +++
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+I am a curious and creative individual with diverse interests ranging from technology to music. My professional pursuits include leveraging open-source models for research and transforming data into actionable insights.
 
-Hugo makes use of a variety of open source projects including:
+## Skills and Interests
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+* Technology: Expertise in using Apache Spark, Kubernetes, MongoDB, Prometheus, Grafana, and FastAPI. 
+* Research: Conducting machine learning research in the health environment, with diseases like COVID-19.
+* Hobbies: Playing the scaleta, working out, and exploring Factorio.
+* Programming: Developing Playwright scripts, working with schemas and dataclasses, and utilizing Python for data modeling and error analysis.
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+## Projects
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
-
-Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
-
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+* Building pipelines for extracting and querying large text documents with open-source models.
+* Implementing full-text search solutions for resource-constrained environments.
+* Trying new things everyday.

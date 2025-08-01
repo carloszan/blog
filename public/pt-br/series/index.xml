@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on Carlos Zansavio</title>
-    <link>http://www.carlos.sjdr.cloud/pt-br/series/</link>
+    <link>http://carlos.sjdr.cloud/pt-br/series/</link>
     <description>Recent content in Series on Carlos Zansavio</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 13 Jul 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://www.carlos.sjdr.cloud/pt-br/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://carlos.sjdr.cloud/pt-br/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Demonstração Do Tema</title>
-      <link>http://www.carlos.sjdr.cloud/pt-br/series/demonstra%C3%A7%C3%A3o-do-tema/</link>
-      <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://www.carlos.sjdr.cloud/pt-br/series/demonstra%C3%A7%C3%A3o-do-tema/</guid>
+      <title>Theme Demo</title>
+      <link>http://carlos.sjdr.cloud/pt-br/series/theme-demo/</link>
+      <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://carlos.sjdr.cloud/pt-br/series/theme-demo/</guid>
       <description></description>
     </item>
   </channel>

@@ -14,6 +14,7 @@ categories = [
     "demonstração do tema",
 ]
 series = ["Demonstração do Tema"]
+draft = "true"
 +++
 
 Se quiser usar o [Mermaid-JS](https://mermaid-js.github.io/mermaid/#/) em sua página.
