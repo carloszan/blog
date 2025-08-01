@@ -2,378 +2,378 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://www.example.com/authors/</loc>
+    <loc>http://www.carlos.sjdr.cloud/authors/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/authors/"
+                href="http://www.carlos.sjdr.cloud/pt-br/authors/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/authors/"
+                href="http://www.carlos.sjdr.cloud/authors/"
                 />
   </url><url>
-    <loc>http://www.example.com/authors/carlos-zansavio/</loc>
-    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://www.example.com/categories/</loc>
+    <loc>http://www.carlos.sjdr.cloud/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/categories/"
+                href="http://www.carlos.sjdr.cloud/pt-br/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/categories/"
+                href="http://www.carlos.sjdr.cloud/"
                 />
   </url><url>
-    <loc>http://www.example.com/tags/css/</loc>
+    <loc>http://www.carlos.sjdr.cloud/authors/carlos-zansavio/</loc>
+    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://www.carlos.sjdr.cloud/categories/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/tags/css/"
+                href="http://www.carlos.sjdr.cloud/pt-br/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/tags/css/"
+                href="http://www.carlos.sjdr.cloud/categories/"
                 />
   </url><url>
-    <loc>http://www.example.com/posts/how-to-create-a-blog-with-hugo/</loc>
-    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://www.example.com/tags/html/</loc>
+    <loc>http://www.carlos.sjdr.cloud/tags/css/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/tags/html/"
+                href="http://www.carlos.sjdr.cloud/pt-br/tags/css/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/tags/html/"
+                href="http://www.carlos.sjdr.cloud/tags/css/"
                 />
   </url><url>
-    <loc>http://www.example.com/tags/hugo/</loc>
+    <loc>http://www.carlos.sjdr.cloud/posts/how-to-create-a-blog-with-hugo/</loc>
+    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://www.carlos.sjdr.cloud/tags/html/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/tags/hugo/"
+                href="http://www.carlos.sjdr.cloud/pt-br/tags/html/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/tags/hugo/"
+                href="http://www.carlos.sjdr.cloud/tags/html/"
                 />
   </url><url>
-    <loc>http://www.example.com/</loc>
+    <loc>http://www.carlos.sjdr.cloud/tags/hugo/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/"
+                href="http://www.carlos.sjdr.cloud/pt-br/tags/hugo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/"
+                href="http://www.carlos.sjdr.cloud/tags/hugo/"
                 />
   </url><url>
-    <loc>http://www.example.com/tags/markdown/</loc>
+    <loc>http://www.carlos.sjdr.cloud/tags/markdown/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/tags/markdown/"
+                href="http://www.carlos.sjdr.cloud/pt-br/tags/markdown/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/tags/markdown/"
+                href="http://www.carlos.sjdr.cloud/tags/markdown/"
                 />
   </url><url>
-    <loc>http://www.example.com/posts/</loc>
+    <loc>http://www.carlos.sjdr.cloud/posts/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/posts/"
+                href="http://www.carlos.sjdr.cloud/pt-br/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/posts/"
+                href="http://www.carlos.sjdr.cloud/posts/"
                 />
   </url><url>
-    <loc>http://www.example.com/series/</loc>
+    <loc>http://www.carlos.sjdr.cloud/series/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/series/"
+                href="http://www.carlos.sjdr.cloud/pt-br/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/series/"
+                href="http://www.carlos.sjdr.cloud/series/"
                 />
   </url><url>
-    <loc>http://www.example.com/tags/shortcodes/</loc>
+    <loc>http://www.carlos.sjdr.cloud/tags/shortcodes/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/tags/shortcodes/"
+                href="http://www.carlos.sjdr.cloud/pt-br/tags/shortcodes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/tags/shortcodes/"
+                href="http://www.carlos.sjdr.cloud/tags/shortcodes/"
                 />
   </url><url>
-    <loc>http://www.example.com/categories/syntax/</loc>
+    <loc>http://www.carlos.sjdr.cloud/categories/syntax/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/categoria/sintaxe/"
+                href="http://www.carlos.sjdr.cloud/pt-br/categoria/sintaxe/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/categories/syntax/"
+                href="http://www.carlos.sjdr.cloud/categories/syntax/"
                 />
   </url><url>
-    <loc>http://www.example.com/tags/</loc>
+    <loc>http://www.carlos.sjdr.cloud/tags/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/tags/"
+                href="http://www.carlos.sjdr.cloud/pt-br/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/tags/"
+                href="http://www.carlos.sjdr.cloud/tags/"
                 />
   </url><url>
-    <loc>http://www.example.com/categories/theme-demo/</loc>
+    <loc>http://www.carlos.sjdr.cloud/categories/theme-demo/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://www.example.com/series/theme-demo/</loc>
+    <loc>http://www.carlos.sjdr.cloud/series/theme-demo/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://www.example.com/authors/lone-coder/</loc>
+    <loc>http://www.carlos.sjdr.cloud/authors/lone-coder/</loc>
     <lastmod>2023-07-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/authors/lone-coder/"
+                href="http://www.carlos.sjdr.cloud/pt-br/authors/lone-coder/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/authors/lone-coder/"
+                href="http://www.carlos.sjdr.cloud/authors/lone-coder/"
                 />
   </url><url>
-    <loc>http://www.example.com/posts/markdown-syntax/</loc>
+    <loc>http://www.carlos.sjdr.cloud/posts/markdown-syntax/</loc>
     <lastmod>2023-07-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/posts/markdown-syntax/"
+                href="http://www.carlos.sjdr.cloud/pt-br/posts/markdown-syntax/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/posts/markdown-syntax/"
+                href="http://www.carlos.sjdr.cloud/posts/markdown-syntax/"
                 />
   </url><url>
-    <loc>http://www.example.com/posts/rich-content/</loc>
+    <loc>http://www.carlos.sjdr.cloud/posts/rich-content/</loc>
     <lastmod>2023-07-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/posts/rich-content/"
+                href="http://www.carlos.sjdr.cloud/pt-br/posts/rich-content/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/posts/rich-content/"
+                href="http://www.carlos.sjdr.cloud/posts/rich-content/"
                 />
   </url><url>
-    <loc>http://www.example.com/posts/more-rich-content/</loc>
+    <loc>http://www.carlos.sjdr.cloud/posts/more-rich-content/</loc>
     <lastmod>2023-07-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/posts/more-rich-content/"
+                href="http://www.carlos.sjdr.cloud/pt-br/posts/more-rich-content/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/posts/more-rich-content/"
+                href="http://www.carlos.sjdr.cloud/posts/more-rich-content/"
                 />
   </url><url>
-    <loc>http://www.example.com/posts/math-typesetting/</loc>
+    <loc>http://www.carlos.sjdr.cloud/posts/math-typesetting/</loc>
     <lastmod>2023-07-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/posts/math-typesetting/"
+                href="http://www.carlos.sjdr.cloud/pt-br/posts/math-typesetting/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/posts/math-typesetting/"
+                href="http://www.carlos.sjdr.cloud/posts/math-typesetting/"
                 />
   </url><url>
-    <loc>http://www.example.com/posts/html-and-css-only-tabs/</loc>
+    <loc>http://www.carlos.sjdr.cloud/posts/html-and-css-only-tabs/</loc>
     <lastmod>2023-07-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/posts/html-and-css-only-tabs/"
+                href="http://www.carlos.sjdr.cloud/pt-br/posts/html-and-css-only-tabs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/posts/html-and-css-only-tabs/"
+                href="http://www.carlos.sjdr.cloud/posts/html-and-css-only-tabs/"
                 />
   </url><url>
-    <loc>http://www.example.com/posts/mermaid-support/</loc>
+    <loc>http://www.carlos.sjdr.cloud/posts/mermaid-support/</loc>
     <lastmod>2023-07-08T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/posts/mermaid-support/"
+                href="http://www.carlos.sjdr.cloud/pt-br/posts/mermaid-support/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/posts/mermaid-support/"
+                href="http://www.carlos.sjdr.cloud/posts/mermaid-support/"
                 />
   </url><url>
-    <loc>http://www.example.com/tags/emoji/</loc>
+    <loc>http://www.carlos.sjdr.cloud/tags/emoji/</loc>
     <lastmod>2023-07-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/tags/emoji/"
+                href="http://www.carlos.sjdr.cloud/pt-br/tags/emoji/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/tags/emoji/"
+                href="http://www.carlos.sjdr.cloud/tags/emoji/"
                 />
   </url><url>
-    <loc>http://www.example.com/posts/emoji-support/</loc>
+    <loc>http://www.carlos.sjdr.cloud/posts/emoji-support/</loc>
     <lastmod>2023-07-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/posts/emoji-support/"
+                href="http://www.carlos.sjdr.cloud/pt-br/posts/emoji-support/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/posts/emoji-support/"
+                href="http://www.carlos.sjdr.cloud/posts/emoji-support/"
                 />
   </url><url>
-    <loc>http://www.example.com/posts/hugo-coder-wiki/</loc>
+    <loc>http://www.carlos.sjdr.cloud/posts/hugo-coder-wiki/</loc>
     <lastmod>2023-07-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/posts/hugo-coder-wiki/"
+                href="http://www.carlos.sjdr.cloud/pt-br/posts/hugo-coder-wiki/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/posts/hugo-coder-wiki/"
+                href="http://www.carlos.sjdr.cloud/posts/hugo-coder-wiki/"
                 />
   </url><url>
-    <loc>http://www.example.com/posts/placeholder-text/</loc>
+    <loc>http://www.carlos.sjdr.cloud/posts/placeholder-text/</loc>
     <lastmod>2023-07-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/posts/placeholder-text/"
+                href="http://www.carlos.sjdr.cloud/pt-br/posts/placeholder-text/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/posts/placeholder-text/"
+                href="http://www.carlos.sjdr.cloud/posts/placeholder-text/"
                 />
   </url><url>
-    <loc>http://www.example.com/tags/text/</loc>
+    <loc>http://www.carlos.sjdr.cloud/tags/text/</loc>
     <lastmod>2023-07-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/tags/text/"
+                href="http://www.carlos.sjdr.cloud/pt-br/tags/text/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/tags/text/"
+                href="http://www.carlos.sjdr.cloud/tags/text/"
                 />
   </url><url>
-    <loc>http://www.example.com/authors/hugo-authors/</loc>
+    <loc>http://www.carlos.sjdr.cloud/authors/hugo-authors/</loc>
     <lastmod>2023-01-05T01:15:29+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/autores/autores-de-hugo/"
+                href="http://www.carlos.sjdr.cloud/pt-br/autores/autores-de-hugo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/authors/hugo-authors/"
+                href="http://www.carlos.sjdr.cloud/authors/hugo-authors/"
                 />
   </url><url>
-    <loc>http://www.example.com/about/</loc>
+    <loc>http://www.carlos.sjdr.cloud/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/about/"
+                href="http://www.carlos.sjdr.cloud/pt-br/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/about/"
+                href="http://www.carlos.sjdr.cloud/about/"
                 />
   </url><url>
-    <loc>http://www.example.com/contact/</loc>
+    <loc>http://www.carlos.sjdr.cloud/contact/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/contact/"
+                href="http://www.carlos.sjdr.cloud/pt-br/contact/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/contact/"
+                href="http://www.carlos.sjdr.cloud/contact/"
                 />
   </url><url>
-    <loc>http://www.example.com/projects/</loc>
+    <loc>http://www.carlos.sjdr.cloud/projects/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://www.example.com/pt-br/projects/"
+                href="http://www.carlos.sjdr.cloud/pt-br/projects/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/projects/"
+                href="http://www.carlos.sjdr.cloud/projects/"
                 />
   </url>
 </urlset>
