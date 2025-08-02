@@ -21,3 +21,4 @@ aliases = ["migrate-from-jekyl"]
 # Motivation
 here it goes. 
 - this thing is powerful
+- daniela lindona
