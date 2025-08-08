@@ -19,4 +19,4 @@ aliases = ["migrate-from-jekyl"]
 +++
 
 # Motivation
-To be done
+To be done.
