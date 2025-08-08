@@ -6,21 +6,21 @@
     <description>Recent content on Carlos Zansavio</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 28 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://carlos.sjdr.cloud/pt-br/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sobre mim</title>
+      <link>http://carlos.sjdr.cloud/pt-br/about/</link>
+      <pubDate>Fri, 01 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://carlos.sjdr.cloud/pt-br/about/</guid>
+      <description>&lt;p&gt;Sou uma pessoa curiosa e criativa, com interesses diversos que vão desde tecnologia até música. Minhas atividades profissionais incluem aproveitar modelos de código aberto para pesquisa e transformar dados em insights que geram valor.&lt;/p&gt;&#xA;&lt;h2 id=&#34;habilidades-e-interesses&#34;&gt;&#xA;  Habilidades e Interesses&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#habilidades-e-interesses&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link para o cabeçalho&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link para o cabeçalho&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tecnologia:&lt;/strong&gt; Experiência em Apache Spark, Kubernetes, MongoDB, Prometheus, Grafana e FastAPI.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Pesquisa:&lt;/strong&gt; Realização de pesquisas em machine learning no setor de saúde, com foco em doenças como COVID-19.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Hobbies:&lt;/strong&gt; Tocar escaleta, treinar e explorar o jogo Factorio.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Programação:&lt;/strong&gt; Desenvolvimento de scripts em Playwright, uso de Python para modelagem de dados e análise de erros.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;projetos&#34;&gt;&#xA;  Projetos&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#projetos&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link para o cabeçalho&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link para o cabeçalho&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Construção de pipelines para extração e consulta de grandes bases de dados, incluindo área de saúde, financeira e pesquisas.&lt;/li&gt;&#xA;&lt;li&gt;Implementação de soluções de busca de texto completo para ambientes com recursos limitados.&lt;/li&gt;&#xA;&lt;li&gt;Experimentar coisas novas todos os dias.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>Como criar um blog com Hugo</title>
       <link>http://carlos.sjdr.cloud/pt-br/posts/how-to-create-a-blog-with-hugo/</link>
       <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
       <guid>http://carlos.sjdr.cloud/pt-br/posts/how-to-create-a-blog-with-hugo/</guid>
       <description>&lt;h1 id=&#34;motivation&#34;&gt;&#xA;  Motivation&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#motivation&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link para o cabeçalho&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link para o cabeçalho&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;poderoso&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>http://carlos.sjdr.cloud/pt-br/about/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>http://carlos.sjdr.cloud/pt-br/about/</guid>
-      <description>&lt;p&gt;Escrito em Go, Hugo é um gerador de sites estáticos de código aberto disponível sobre a licença &lt;a href=&#34;https://github.com/gohugoio/hugo/blob/master/LICENSE&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Apache Licence 2.0.&lt;/a&gt; O Hugo suporta TOML, YAML e JSON como arquivos de dados, Markdown e HTML como arquivos de conteúdo, e usa shortcodes para adicionar conteúdos ricos. Outras funcionalidades notaveis são taxonomias, modo multilingual, processamento de imagens, formatos de saída customizaveis, minificação de HTML/CSS/JS e suporte a fluxos SASS/SCSS.&lt;/p&gt;&#xA;&lt;p&gt;O Hugo faz o uso de vários projetos de código aberto incluíndo:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Contato</title>

@@ -2,6 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://carlos.sjdr.cloud/pt-br/</loc>
+    <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://carlos.sjdr.cloud/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://carlos.sjdr.cloud/pt-br/"
+                />
+  </url><url>
+    <loc>http://carlos.sjdr.cloud/pt-br/about/</loc>
+    <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://carlos.sjdr.cloud/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://carlos.sjdr.cloud/pt-br/about/"
+                />
+  </url><url>
     <loc>http://carlos.sjdr.cloud/pt-br/authors/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -13,19 +39,6 @@
                 rel="alternate"
                 hreflang="pt-br"
                 href="http://carlos.sjdr.cloud/pt-br/authors/"
-                />
-  </url><url>
-    <loc>http://carlos.sjdr.cloud/pt-br/</loc>
-    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/"
                 />
   </url><url>
     <loc>http://carlos.sjdr.cloud/pt-br/authors/carlos-zansavio/</loc>
@@ -224,19 +237,6 @@
                 rel="alternate"
                 hreflang="pt-br"
                 href="http://carlos.sjdr.cloud/pt-br/tags/shortcodes/"
-                />
-  </url><url>
-    <loc>http://carlos.sjdr.cloud/pt-br/about/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/about/"
                 />
   </url><url>
     <loc>http://carlos.sjdr.cloud/pt-br/contact/</loc>

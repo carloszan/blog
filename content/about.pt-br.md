@@ -1,25 +1,22 @@
 +++
-title = "About"
-description = "Hugo, the world's fastest framework for building websites"
-date = "2019-02-28"
-aliases = ["about-us", "about-hugo", "contact"]
-author = "Hugo Authors"
+title = "Sobre mim"
+description = "Carlos, o engenheiro"
+date = "2025-08-01"
+aliases = ["about-me", "contact"]
+author = "Carlos Zansavio"
 +++
 
-Escrito em Go, Hugo é um gerador de sites estáticos de código aberto disponível sobre a licença [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) O Hugo suporta TOML, YAML e JSON como arquivos de dados, Markdown e HTML como arquivos de conteúdo, e usa shortcodes para adicionar conteúdos ricos. Outras funcionalidades notaveis são taxonomias, modo multilingual, processamento de imagens, formatos de saída customizaveis, minificação de HTML/CSS/JS e suporte a fluxos SASS/SCSS.
+Sou uma pessoa curiosa e criativa, com interesses diversos que vão desde tecnologia até música. Minhas atividades profissionais incluem aproveitar modelos de código aberto para pesquisa e transformar dados em insights que geram valor.
 
-O Hugo faz o uso de vários projetos de código aberto incluíndo:
+## Habilidades e Interesses  
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+* **Tecnologia:** Experiência em Apache Spark, Kubernetes, MongoDB, Prometheus, Grafana e FastAPI.  
+* **Pesquisa:** Realização de pesquisas em machine learning no setor de saúde, com foco em doenças como COVID-19.  
+* **Hobbies:** Tocar escaleta, treinar e explorar o jogo Factorio.  
+* **Programação:** Desenvolvimento de scripts em Playwright, uso de Python para modelagem de dados e análise de erros.  
 
-O Hugo é ideal para blogs, sites corporativos, protfólio criativos, revistas online, aplicações de página única ou até sites com milhares de páginas.
+## Projetos  
 
-O Hugo é para pessoas que querem cuidar do seu próprio site sem se preocupar com a configuração ambientes complicados, dependências e bancos de dados.
-
-Sites contru;idos com Hugo são extremamente rápidos, seguros e podem ser implantados em qualquer lugar, incluíndo AWS, GitHub Pages, Heroku, Netlify e outros provedores de hospedagem.
-
-Saiba mais e contribua em [GitHub](https://github.com/gohugoio).
+* Construção de pipelines para extração e consulta de grandes bases de dados, incluindo área de saúde, financeira e pesquisas.
+* Implementação de soluções de busca de texto completo para ambientes com recursos limitados.  
+* Experimentar coisas novas todos os dias.  
