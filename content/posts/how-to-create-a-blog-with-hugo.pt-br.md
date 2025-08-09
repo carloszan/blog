@@ -5,18 +5,15 @@ date = "2025-07-28"
 description = "Como criar um blog com Hugo"
 tags = [
     "hugo",
-    "markdown",
-    "css",
-    "html",
-    "shortcodes",
+    "tutorial"
 ]
 categories = [
-    "theme demo",
-    "syntax",
+    "tutorials",
 ]
-series = ["Theme Demo"]
-aliases = ["migrate-from-jekyl"]
+series = []
+aliases = []
+draft = true
 +++
 
 # Motivation
-- poderoso
+Para fazer

@@ -28,110 +28,6 @@
                 href="http://carlos.sjdr.cloud/pt-br/about/"
                 />
   </url><url>
-    <loc>http://carlos.sjdr.cloud/pt-br/authors/</loc>
-    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/authors/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/authors/"
-                />
-  </url><url>
-    <loc>http://carlos.sjdr.cloud/pt-br/authors/carlos-zansavio/</loc>
-    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/authors/carlos-zansavio/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/authors/carlos-zansavio/"
-                />
-  </url><url>
-    <loc>http://carlos.sjdr.cloud/pt-br/categories/</loc>
-    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/categories/"
-                />
-  </url><url>
-    <loc>http://carlos.sjdr.cloud/pt-br/posts/how-to-create-a-blog-with-hugo/</loc>
-    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/posts/how-to-create-a-blog-with-hugo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/posts/how-to-create-a-blog-with-hugo/"
-                />
-  </url><url>
-    <loc>http://carlos.sjdr.cloud/pt-br/tags/css/</loc>
-    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/tags/css/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/tags/css/"
-                />
-  </url><url>
-    <loc>http://carlos.sjdr.cloud/pt-br/tags/html/</loc>
-    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/tags/html/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/tags/html/"
-                />
-  </url><url>
-    <loc>http://carlos.sjdr.cloud/pt-br/tags/hugo/</loc>
-    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/tags/hugo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/tags/hugo/"
-                />
-  </url><url>
-    <loc>http://carlos.sjdr.cloud/pt-br/tags/markdown/</loc>
-    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/tags/markdown/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/tags/markdown/"
-                />
-  </url><url>
     <loc>http://carlos.sjdr.cloud/pt-br/posts/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -145,56 +41,17 @@
                 href="http://carlos.sjdr.cloud/pt-br/posts/"
                 />
   </url><url>
-    <loc>http://carlos.sjdr.cloud/pt-br/series/</loc>
-    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
+    <loc>http://carlos.sjdr.cloud/pt-br/authors/</loc>
+    <lastmod>2023-01-05T01:15:52+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://carlos.sjdr.cloud/series/"
+                href="http://carlos.sjdr.cloud/authors/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/series/"
-                />
-  </url><url>
-    <loc>http://carlos.sjdr.cloud/pt-br/tags/</loc>
-    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/tags/"
-                />
-  </url><url>
-    <loc>http://carlos.sjdr.cloud/pt-br/categories/theme-demo/</loc>
-    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/categories/theme-demo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/categories/theme-demo/"
-                />
-  </url><url>
-    <loc>http://carlos.sjdr.cloud/pt-br/series/theme-demo/</loc>
-    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/series/theme-demo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/series/theme-demo/"
+                href="http://carlos.sjdr.cloud/pt-br/authors/"
                 />
   </url><url>
     <loc>http://carlos.sjdr.cloud/pt-br/autores/autores-de-hugo/</loc>
@@ -210,33 +67,39 @@
                 href="http://carlos.sjdr.cloud/pt-br/autores/autores-de-hugo/"
                 />
   </url><url>
+    <loc>http://carlos.sjdr.cloud/pt-br/categories/</loc>
+    <lastmod>2023-01-04T23:21:18+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://carlos.sjdr.cloud/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://carlos.sjdr.cloud/pt-br/categories/"
+                />
+  </url><url>
     <loc>http://carlos.sjdr.cloud/pt-br/categoria/temas/</loc>
     <lastmod>2023-01-04T23:21:18+01:00</lastmod>
   </url><url>
     <loc>http://carlos.sjdr.cloud/pt-br/categoria/sintaxe/</loc>
     <lastmod>2023-01-04T23:21:06+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/categories/syntax/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/categoria/sintaxe/"
-                />
   </url><url>
     <loc>http://carlos.sjdr.cloud/pt-br/tags/shortcodes/</loc>
+    <lastmod>2023-01-04T11:51:36+01:00</lastmod>
+  </url><url>
+    <loc>http://carlos.sjdr.cloud/pt-br/tags/</loc>
     <lastmod>2023-01-04T11:51:36+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://carlos.sjdr.cloud/tags/shortcodes/"
+                href="http://carlos.sjdr.cloud/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/tags/shortcodes/"
+                href="http://carlos.sjdr.cloud/pt-br/tags/"
                 />
   </url><url>
     <loc>http://carlos.sjdr.cloud/pt-br/contact/</loc>
@@ -261,6 +124,18 @@
                 rel="alternate"
                 hreflang="pt-br"
                 href="http://carlos.sjdr.cloud/pt-br/projects/"
+                />
+  </url><url>
+    <loc>http://carlos.sjdr.cloud/pt-br/series/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://carlos.sjdr.cloud/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://carlos.sjdr.cloud/pt-br/series/"
                 />
   </url>
 </urlset>
