@@ -12,7 +12,7 @@ categories = [
 ]
 series = []
 aliases = []
-draft = false
+draft = true
 +++
 
 # Motivation
@@ -23,3 +23,8 @@ The inspiration struck after watching NetworkChuck's excellent Hugo tutorial ([v
 Speaking of workflows—I've been using Obsidian as my "second brain" for over a year. Its Git-backed note-taking system has been transformative for my knowledge management. The missing piece? A way to publish directly from Obsidian to my own blog without relying on third-party platforms.
 
 NetworkChuck's approach used external hosting, but as a homelab enthusiast running my own services, I realized I could create something even more tailored. In this article, I'll walk through my solution—a self-hosted publishing pipeline that might just inspire you to build your own using the tools you already have.
+
+
+# Requirements
+- You're going to need a server with a public IP.
+- Docker environment for deploying blog images.
