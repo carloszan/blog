@@ -11,7 +11,7 @@ categories = [
 ]
 +++
 
- This is a fundamental concept in data architecture. Here’s a clear breakdown of the differences between data warehouses and data lakes.
+This is a fundamental concept in data architecture. Here’s a clear breakdown of the differences between data warehouses and data lakes.
 
 Basically **data warehouses** stores well structured data. So you can build a data warehouse with one or multiple SQL databases. On cloud, it could be, for example, Google BigQuery.
 In this approach, you deal primarily with structured data that has been processed and transformed for a specific purpose. You just go there, get what you want and that's it.
