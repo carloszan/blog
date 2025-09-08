@@ -9,6 +9,13 @@
     <lastBuildDate>Mon, 08 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://carlos.sjdr.cloud/categories/twitter/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>How am I building a Twitter Clone</title>
+      <link>http://carlos.sjdr.cloud/posts/how-i-am-building-a-twitter-clone/</link>
+      <pubDate>Mon, 08 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://carlos.sjdr.cloud/posts/how-i-am-building-a-twitter-clone/</guid>
+      <description>&lt;p&gt;I want to build a twitter clone. Currently, I am a data engineer, previously a backend software engineer.&#xA;I don&amp;rsquo;t have all the necessary skills to do that.&#xA;So what I can do is use the clones people already did and use their code.&lt;/p&gt;&#xA;&lt;h1 id=&#34;requirements&#34;&gt;&#xA;  Requirements&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#requirements&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Frontend app and/or mobile app must be done.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;I will only work with the backend stuff.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Start simple and complex later.&lt;/li&gt;&#xA;&lt;li&gt;Fully functional in the end with CI/CD.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;open-sourced-twitter-clones&#34;&gt;&#xA;  Open sourced Twitter Clones&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#open-sourced-twitter-clones&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;This is a list of Twitter clones:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Open sourced Twitter clones</title>
       <link>http://carlos.sjdr.cloud/posts/twitter-clone/</link>
       <pubDate>Mon, 08 Sep 2025 00:00:00 +0000</pubDate>
