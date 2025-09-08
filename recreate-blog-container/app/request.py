@@ -10,7 +10,7 @@ create_container_input = {
         "Dns": [],
         "ExtraHosts": [],
         "RestartPolicy": {
-            "Name": "no"
+            "Name": "always"
         },
         "Privileged": False,
         "Init": False,
