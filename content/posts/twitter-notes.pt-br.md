@@ -1,6 +1,6 @@
 +++
 authors = ["Carlos Zansavio"]
-title = "Notas do clone de um Twitter"
+title = "Notas do clone do Twitter"
 date = "2025-09-08"
 tags = [
     "clones",
