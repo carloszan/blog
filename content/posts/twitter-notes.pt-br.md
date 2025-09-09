@@ -60,9 +60,10 @@ https://docs.google.com/spreadsheets/d/1YP46ZUgBsgo2t-6hQmh3Pvz98VOVYJJJMpaq56Ob
 ## TheAlphamerc/flutter_twitter_clone
 - Projeto mobile escrito em Flutter.
 - É o projeto com mais estrelas de Twitter Clone no Github (4200 estrelas).
+- Não entendo nada de Flutter
 ## merikbest/twitter-spring-reactjs
 - Projeto maduro.
 - Escrito em React (Typescript) e Java.
 - Microsserviços.
 - Banco de dados: **Postgres**.
-- Media no **S3**.
+- Mídias no **S3**.
