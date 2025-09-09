@@ -10,4 +10,4 @@ categories = [
 ]
 +++
 
-Currently the notes are only in Portuguese version, [click here](https://carlos.sjdr.cloud/pt-br/posts/twitter-notes).
+Currently the notes are only in [Portuguese, click here](https://carlos.sjdr.cloud/pt-br/posts/twitter-notes).
