@@ -10,20 +10,20 @@ categories = [
 ]
 +++
 
-I want to build a twitter clone. Currently, I am a data engineer, previously a backend software engineer.
-I don't have all the necessary skills to do that.
-So what I can do is use the clones people already did and use their code.
+Eu quero construir um clone do Twitter. Atualmente, sou engenheiro de dados e, anteriormente, era engenheiro de software de backend.  
+Não tenho todas as habilidades necessárias para fazer isso.  
+Então, o que posso fazer é usar os clones que outras pessoas já fizeram e utilizar o código delas.
 
-# Requirements
+# Requisitos
 
-- Frontend app and/or mobile app must be ready.
-	- I will only work with the backend stuff.
-- Start simple and complex later.
-- Fully functional in the end with CI/CD.
+- O aplicativo frontend e/ou mobile deve estar pronto.
+    - Vou trabalhar apenas com a parte do backend.
+- Começar de forma simples e tornar complexo posteriormente.
+- Totalmente funcional no final, com CI/CD.
 
 # Open sourced Twitter Clones
 
-This is a list of Twitter clones:
+Lista:
 
 | Name                                    | Github Source                                         | Demo                                         |
 |-----------------------------------------|-------------------------------------------------------|----------------------------------------------|
@@ -33,9 +33,9 @@ This is a list of Twitter clones:
 | merikbest/twitter-spring-reactjs        | https://github.com/merikbest/twitter-spring-reactjs   | Frontend and Backend                         |
 
 
-# Comparison
+# Comparação
 
-Comparison link:
+Link com a tabela de comparação:
 https://docs.google.com/spreadsheets/d/1YP46ZUgBsgo2t-6hQmh3Pvz98VOVYJJJMpaq56ObF1E/edit?usp=sharing
 
 ## GithubShaban-Eissa/NextJS-Twitter-Clone
