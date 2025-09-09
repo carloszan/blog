@@ -16,7 +16,7 @@ So what I can do is use the clones people already did and use their code.
 
 # Requirements
 
-- Frontend app and/or mobile app must be done.
+- Frontend app and/or mobile app must be ready.
 	- I will only work with the backend stuff.
 - Start simple and complex later.
 - Fully functional in the end with CI/CD.
@@ -35,4 +35,5 @@ This is a list of Twitter clones:
 
 # Comparasion
 
-Comparison link: https://docs.google.com/spreadsheets/d/1YP46ZUgBsgo2t-6hQmh3Pvz98VOVYJJJMpaq56ObF1E/edit?usp=sharing
+Comparison link:
+https://docs.google.com/spreadsheets/d/1YP46ZUgBsgo2t-6hQmh3Pvz98VOVYJJJMpaq56ObF1E/edit?usp=sharing
