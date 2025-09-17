@@ -356,6 +356,48 @@ Então, o que posso fazer é usar os clones que outras pessoas já fizeram e uti
 <li>Banco de dados: <strong>Postgres</strong>.</li>
 <li>Mídias no <strong>S3</strong>.</li>
 </ul>
+<h1 id="docker-build">
+  Docker Build
+  <a class="heading-link" href="#docker-build">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link para o cabeçalho"></i>
+    <span class="sr-only">Link para o cabeçalho</span>
+  </a>
+</h1>
+<pre tabindex="0"><code>docker build --platform linux/amd64,linux/arm64 -t carloszan/bemtevi:v1 
+</code></pre><h1 id="api-definition">
+  API Definition
+  <a class="heading-link" href="#api-definition">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link para o cabeçalho"></i>
+    <span class="sr-only">Link para o cabeçalho</span>
+  </a>
+</h1>
+<table>
+  <thead>
+      <tr>
+          <th>Feature</th>
+          <th>File</th>
+          <th>Possible HTTP API Endpoint</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Create tweet</td>
+          <td>src\components\input\input.tsx:82</td>
+          <td>/api<br></td>
+      </tr>
+  </tbody>
+</table>
+<h1 id="to-do">
+  To do
+  <a class="heading-link" href="#to-do">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link para o cabeçalho"></i>
+    <span class="sr-only">Link para o cabeçalho</span>
+  </a>
+</h1>
+<ul>
+<li><input disabled="" type="checkbox"> Fix the need for having .env when building a new container. It blocks environment variables from outside.</li>
+<li><input disabled="" type="checkbox"> Username must be lowercase, when creating a new user.</li>
+</ul>
 
       </div>
 

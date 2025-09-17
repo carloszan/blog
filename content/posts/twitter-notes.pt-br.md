@@ -67,3 +67,17 @@ https://docs.google.com/spreadsheets/d/1YP46ZUgBsgo2t-6hQmh3Pvz98VOVYJJJMpaq56Ob
 - Microsserviços.
 - Banco de dados: **Postgres**.
 - Mídias no **S3**.
+
+# Docker Build
+```
+docker build --platform linux/amd64,linux/arm64 -t carloszan/bemtevi:v1 
+```
+# API Definition
+
+| Feature      | File                              | Possible HTTP API Endpoint |
+| ------------ | --------------------------------- | -------------------------- |
+| Create tweet | src\components\input\input.tsx:82 | /api<br>                   |
+# To do
+
+- [ ] Fix the need for having .env when building a new container. It blocks environment variables from outside.
+- [ ] Username must be lowercase, when creating a new user.
