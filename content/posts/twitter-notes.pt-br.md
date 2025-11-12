@@ -8,6 +8,7 @@ tags = [
 categories = [
     "Twitter",
 ]
+draft = true
 +++
 
 Eu quero construir um clone do Twitter. Atualmente, sou engenheiro de dados e, anteriormente, era engenheiro de software de backend.  
@@ -74,9 +75,9 @@ docker build --platform linux/amd64,linux/arm64 -t carloszan/bemtevi:v1
 ```
 # API Definition
 
-| Feature      | File                              | Possible HTTP API Endpoint |
-| ------------ | --------------------------------- | -------------------------- |
-| Create tweet | src\components\input\input.tsx:82 | /api<br>                   |
+| Feature      | File                              | Possible HTTP API Endpoint | Schema                   |
+| ------------ | --------------------------------- | -------------------------- | ------------------------ |
+| Create tweet | src\components\input\input.tsx:75 | (POST) /api/v1/tweets<br>  | src\lib\types\tweet.ts:5 |
 # To do
 
 - [ ] Fix the need for having .env when building a new container. It blocks environment variables from outside.

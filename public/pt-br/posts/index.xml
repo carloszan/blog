@@ -6,15 +6,8 @@
     <description>Recent content in Posts on Carlos Zansavio</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 08 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://carlos.sjdr.cloud/pt-br/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Notas do clone do Twitter</title>
-      <link>http://carlos.sjdr.cloud/pt-br/posts/twitter-notes/</link>
-      <pubDate>Mon, 08 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://carlos.sjdr.cloud/pt-br/posts/twitter-notes/</guid>
-      <description>&lt;p&gt;Eu quero construir um clone do Twitter. Atualmente, sou engenheiro de dados e, anteriormente, era engenheiro de software de backend.&lt;br&gt;&#xA;Não tenho todas as habilidades necessárias para fazer isso.&lt;br&gt;&#xA;Então, o que posso fazer é usar os clones que outras pessoas já fizeram e utilizar o código delas.&lt;/p&gt;&#xA;&lt;h1 id=&#34;requisitos&#34;&gt;&#xA;  Requisitos&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#requisitos&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link para o cabeçalho&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link para o cabeçalho&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;O aplicativo frontend e/ou mobile deve estar pronto.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Vou trabalhar apenas com a parte do backend.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Começar de forma simples e tornar complexo posteriormente.&lt;/li&gt;&#xA;&lt;li&gt;Totalmente funcional no final, com CI/CD.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;open-sourced-twitter-clones&#34;&gt;&#xA;  Open sourced Twitter Clones&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#open-sourced-twitter-clones&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link para o cabeçalho&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link para o cabeçalho&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Lista:&lt;/p&gt;</description>
-    </item>
     <item>
       <title>Diferença entre data warehouse e data lakes</title>
       <link>http://carlos.sjdr.cloud/pt-br/posts/difference-between-data-warehouses-and-data-lakes/</link>
