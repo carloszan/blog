@@ -1,6 +1,6 @@
 +++
 authors = ["Carlos Zansavio"]
-title = "Difference between data warehouses and data lakes"
+title = "Difference between data warehouses and data lakehouses"
 date = "2025-09-04"
 description = "What's the difference?"
 tags = [
@@ -17,7 +17,7 @@ Basically **data warehouses** stores well structured data. So you can build a da
 In this approach, you deal primarily with structured data that has been processed and transformed for a specific purpose. You just go there, get what you want and that's it.
 Companies can create data warehouses using SQL databases like Postgres or it can be a cloud solution.
 
-On the other hand, **data lakes** stores data files. It can any data file format.
+On the other hand, **data lakehouses** stores data files. It can any data file format.
 So a data lake could be implemented using AWS S3, MinIO or any blob storage tool.
 The thing here is what data can be saved on this blob storage and how you're going to process this data.
 One of the most used format are [Delta](https://delta.io/), which is Parquet files but versioned.

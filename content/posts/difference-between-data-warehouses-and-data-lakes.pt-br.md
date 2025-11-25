@@ -1,6 +1,6 @@
 +++
 authors = ["Carlos Zansavio"]
-title = "Diferença entre data warehouse e data lakes"
+title = "Diferença entre data warehouse e data lakehouses"
 date = "2025-09-04"
 description = "Qual será a diferença?"
 tags = [
@@ -17,7 +17,7 @@ Basicamente, data warehouses armazenam dados estruturados. Assim, você pode con
 Nessa abordagem, você lida principalmente com dados estruturados que foram processados ​​e transformados para uma finalidade específica. Você simplesmente acessa os bancos, obtém o que deseja e pronto.
 As empresas podem criar data warehouses usando bancos de dados SQL como o Postgres ou uma solução em nuvem.
 
-Por outro lado, data lakes armazenam arquivos de dados. Eles podem usar qualquer formato de arquivo de dados.
+Por outro lado, data lakehouses armazenam arquivos de dados. Eles podem usar qualquer formato de arquivo de dados.
 Um data lake pode ser implementado usando AWS S3, MinIO ou qualquer outro blob storage.
 A questão aqui é quais dados podem ser salvos nesse armazenamento nesse storage e como você irá processá-los.
 Um dos formatos mais usados ​​é o [Delta](https://delta.io/), que são arquivos Parquet, mas versionados.
