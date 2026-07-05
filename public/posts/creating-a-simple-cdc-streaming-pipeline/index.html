@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Building a CDC Streaming Pipeline locally · carlos zansavio
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Carlos Zansavio">
+<meta name="description" content="Let&#39;s build a CDC streaming pipeline locally.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Building a CDC Streaming Pipeline locally">
+	<meta name="twitter:description" content="Let&#39;s build a CDC streaming pipeline locally.">
+
+<meta property="og:url" content="http://carlos.sjdr.cloud/posts/creating-a-simple-cdc-streaming-pipeline/">
+	<meta property="og:site_name" content="carlos zansavio">
+	<meta property="og:title" content="Building a CDC Streaming Pipeline locally">
+	<meta property="og:description" content="Let&#39;s build a CDC streaming pipeline locally.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-07-05T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-07-05T00:00:00+00:00">
+		<meta property="article:tag" content="Data-Engineering">
+
+
+
+
+<link rel="canonical" href="http://carlos.sjdr.cloud/posts/creating-a-simple-cdc-streaming-pipeline/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.f03d6359cf766772af14fbe07ce6aca734b321c2e15acba0bbf4e2254941c460.css" integrity="sha256-8D1jWc92Z3KvFPvgfOaspzSzIcLhWsugu/TiJUlBxGA=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.ad48f476275974885bdc03d5251e3cdbe1678c54a63ff772376b0ed2adc468dd.css" integrity="sha256-rUj0didZdIhb3APVJR482&#43;FnjFSmP/dyN2sO0q3EaN0=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://carlos.sjdr.cloud/">
+      carlos zansavio
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://carlos.sjdr.cloud/posts/creating-a-simple-cdc-streaming-pipeline/">
+              Building a CDC Streaming Pipeline locally
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2026-07-05T00:00:00Z">
+                July 5, 2026
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              7-minute read
+            </span>
+          </div>
+          <div class="authors">
+  <i class="fa-solid fa-user" aria-hidden="true"></i>
+    <a href="/authors/carlos-zansavio/">Carlos Zansavio</a></div>
+
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/categories/tutorial/">Tutorial</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/data-engineering/">Data-Engineering</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h1 id="introduction">
+  Introduction
+  <a class="heading-link" href="#introduction">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Want to understand what a Change Data Capture (CDC) streaming pipeline is and how to build one locally with Docker? Let me help you. This is a POC project to understand how things work in real life.</p>
+<p>You can find the repository <a href="https://github.com/carloszan/cdc"  class="external-link" target="_blank" rel="noopener">here</a>.</p>
+<h1 id="whats-cdc-streaming-pipeline">
+  What&rsquo;s CDC Streaming pipeline?
+  <a class="heading-link" href="#whats-cdc-streaming-pipeline">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>CDC stands for Change Data Capture. In simple terms, it streams database update logs to a topic (if using Kafka), so other systems can stay in sync with the source database in near real-time. This approach is especially useful for feeding data into Online Analytical Processing (OLAP) platforms, where analysts need fresh data to work with.</p>
+<h2 id="the-problem">
+  The problem
+  <a class="heading-link" href="#the-problem">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The core issue is real-time database replication, particularly for OLAP use cases.</p>
+<h2 id="why-replicate-databases-at-all">
+  Why Replicate Databases at All?
+  <a class="heading-link" href="#why-replicate-databases-at-all">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Here&rsquo;s the thing: analysts can&rsquo;t just query the production database (OLTP) directly. One heavy query and they might lock up tables or even crash the system. So data engineers step in to build ETL (or ELT) pipelines that move data from production to safer environments where the data team can explore freely.</p>
+<p>There are different ways to extract this data. Batch processing is the traditional approach—run a job every night, move a chunk of data, done. But what if you need updates as they happen? That&rsquo;s where CDC streaming shines, as you can receive the data continuously.</p>
+<h2 id="the-price">
+  The price
+  <a class="heading-link" href="#the-price">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Of course, nothing comes for free. The price of real-time is infrastructure. You need to deploy or rent a Kafka cluster, which can get expensive fast. Furthermore, your processing engine has to stay running 24/7. That adds operational overhead (more things to monitor). Compared to a scheduled batch job that runs and finishes, a streaming pipeline demands constant attention.</p>
+<h1 id="system-design">
+  System Design
+  <a class="heading-link" href="#system-design">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>This is a POC meant to run locally on your machine, not a production-grade setup. We will keep things simple so you can see the moving parts without getting lost in enterprise complexity.</p>
+<h2 id="components">
+  Components
+  <a class="heading-link" href="#components">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>Postgres: Your source database. This is where the original data lives and changes happen.</li>
+<li>Debezium: This is the connector that reads the transaction logs from Postgres and pushes every change to Kafka.</li>
+<li>Kafka: The streaming platform that acts as the central hub. All change events flow through here before they get processed.</li>
+<li>Apache Spark: The processing engine that consumes the events from Kafka, transforms them if needed, and writes the data out to the final destination.</li>
+<li>Delta Lake: This is where we&rsquo;ll build our OLAP layer. In a real production scenario, you&rsquo;d store these Delta files in cloud blob storage (such as S3, Azure Blob Storage, R2). For this local POC, though, we&rsquo;ll just write everything to a <code>/tmp</code> folder on your machine. Good enough for testing.</li>
+</ul>
+<h2 id="design">
+  Design
+  <a class="heading-link" href="#design">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>![[CDC.drawio.png]]</p>
+<h2 id="about-debezium">
+  About Debezium
+  <a class="heading-link" href="#about-debezium">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>You might be wondering: how does Debezium actually capture those changes?</p>
+<p>First, you need to enable logical replication in Postgres. That means turning on the WAL (Write-Ahead Log) at the right level so Postgres actually logs every change with enough detail for Debezium to read.</p>
+<p>Once that&rsquo;s set up, Debezium connects to Postgres using the same replication protocol that Postgres uses internally to sync data across cluster nodes. It basically acts like a replica, staying plugged into the replication stream and listening for new changes.</p>
+<p>So here&rsquo;s how it flows: a user updates a row in Postgres. That change gets written to the WAL. Debezium picks it up from the replication stream, packages it into an event, and publishes that event to a Kafka topic. From there, any other service can subscribe and act on that change.</p>
+<p>One important thing to note: Debezium doesn&rsquo;t poll the database for changes. It doesn&rsquo;t run queries like <code>SELECT * FROM table WHERE updated_at &gt; last_run</code>. Instead, it streams the changes directly from the log. No extra query load on your production database.</p>
+<h1 id="running">
+  Running
+  <a class="heading-link" href="#running">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Alright, let&rsquo;s get this thing running.</p>
+<p>Start by cloning the <a href="https://github.com/carloszan/cdc"  class="external-link" target="_blank" rel="noopener">GitHub repository</a>. Then open the <em>devcontainer</em> that&rsquo;s already configured inside the repo. This part matters because Spark runs inside the container, and it needs to communicate with the other services we&rsquo;ll spin up with Docker Compose.</p>
+<p>Once you&rsquo;re inside the <em>devcontainer</em>, run these commands in order:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 1. Start all services</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> cdc <span class="o">&amp;&amp;</span> docker compose up -d
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. Wait for Kafka Connect to be ready (~60s)</span>
+</span></span><span class="line"><span class="cl"><span class="k">until</span> curl -sf http://localhost:8083/connectors<span class="p">;</span> <span class="k">do</span> sleep 3<span class="p">;</span> <span class="k">done</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&#34;Ready&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. Register the Debezium PostgreSQL connector</span>
+</span></span><span class="line"><span class="cl">bash connector/register-connector.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 4. Verify connector is running</span>
+</span></span><span class="line"><span class="cl">curl -s http://localhost:8083/connectors/postgres-cdc-connector/status
+</span></span></code></pre></div><p>Here&rsquo;s what each step does:</p>
+<ul>
+<li><strong>Step 1</strong> spins up all the services defined in the compose file: Postgres (the source), Kafka 3.7 with KRaft (no Zookeeper needed), Debezium (the connector service), and Kafka-UI (so you can peek at your topics visually).</li>
+<li><strong>Step 2</strong> just waits until Debezium&rsquo;s API is responsive—it takes about a minute to fully initialize.</li>
+<li><strong>Step 3</strong> registers Postgres as a source connector inside Debezium, telling it which database to watch and which Kafka topic to publish changes to.</li>
+<li><strong>Step 4</strong> is a quick sanity check to confirm the connector is up and running.</li>
+</ul>
+<p>With everything up, navigate to <code>cdc/spark/cdc_consumer.py</code> and run the script. This consumer does a few things: it defines the customer schema, sets up the envelope structure Debezium uses, installs the Delta Lake packages, and configures Spark with some extensions we&rsquo;ll need. You&rsquo;ll also notice we set <code>spark.sql.shuffle.partitions</code> to 2, fine for local testing, but don&rsquo;t do this in production.</p>
+<p>The script then transforms the raw change events into something more readable and sinks the data to two places: the console (so you can see events streaming in real time) and Delta Lake (so you have persistent data to query later).</p>
+<p>The checkpoint files—Spark uses these to track what it has already processed—live at <code>/tmp/cdc-checkpoint/customer</code>, and the actual Delta tables end up in <code>/tmp/cdc-delta/customer</code>.</p>
+<h2 id="how-to-insert-update-or-delete-data">
+  How to Insert, Update, or Delete Data
+  <a class="heading-link" href="#how-to-insert-update-or-delete-data">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Now we need to actually change some data in Postgres and watch the pipeline react. You could run SQL commands directly, but I&rsquo;ve included a helper script to make it easier: <code>bash postgres/cdc_test.sh</code>.</p>
+<p>To insert a new record:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Let the script generate an ID for you</span>
+</span></span><span class="line"><span class="cl">bash postgres/cdc_test.sh insert
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Or specify your own values</span>
+</span></span><span class="line"><span class="cl">bash postgres/cdc_test.sh insert <span class="m">99</span> <span class="s2">&#34;Eve Torres&#34;</span> <span class="s2">&#34;eve@example.com&#34;</span>
+</span></span></code></pre></div><p>To update an existing record:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Update just the email</span>
+</span></span><span class="line"><span class="cl">bash postgres/cdc_test.sh update <span class="m">99</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Update both name and email</span>
+</span></span><span class="line"><span class="cl">bash postgres/cdc_test.sh update <span class="m">99</span> <span class="s2">&#34;Eve T.&#34;</span>
+</span></span></code></pre></div><p>To delete:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bash postgres/cdc_test.sh delete <span class="m">99</span>
+</span></span></code></pre></div><p>Every change you make will immediately flow through Debezium into Kafka, get picked up by Spark, and appear in your console output within seconds.</p>
+<h2 id="checking-the-changes">
+  Checking the Changes
+  <a class="heading-link" href="#checking-the-changes">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The console sink gives you a live view, but sometimes you want to inspect the data that&rsquo;s been stored. That&rsquo;s what <code>cdc/spark/rebuild_state.py</code> is for. It reads the Delta tables and shows you what the current state looks like, reconstructing a view of your database.</p>
+<p>Think of this as a quick way to simulate what you&rsquo;d do in a Silver layer: clean up the raw CDC events and present them as a proper table.</p>
+<p>Give it a run and see the changes reflected.</p>
+<h1 id="conclusion">
+  Conclusion
+  <a class="heading-link" href="#conclusion">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Look, you don&rsquo;t need to memorize every line of code here. The real takeaway is understanding the trade-offs. CDC streaming is powerful as you get near-real-time replication with minimal impact on your source database. But it comes with operational complexity: you&rsquo;re maintaining Kafka, Debezium, and a streaming engine. It&rsquo;s more expensive than batch, harder to debug.</p>
+<p>When is it worth it? When your analysts genuinely need fresh data by the minute.</p>
+<p>This POC gives you a solid foundation. You&rsquo;ve seen the components, you&rsquo;ve run the pipeline, you&rsquo;ve poked at the data. Now you can decide if real-time is the right tool for your next project.</p>
+<p>If you want to go deep, I highly recommend checking  <a href="https://github.com/carloszan/cdc/blob/main/cdc/QA.md"  class="external-link" target="_blank" rel="noopener">the QA, found inside the repository</a>.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2025 -
+    
+    2026
+     Carlos Zansavio 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MFNJ21GZRL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MFNJ21GZRL');
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

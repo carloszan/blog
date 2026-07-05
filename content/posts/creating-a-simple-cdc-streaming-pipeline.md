@@ -1,6 +1,6 @@
 +++
 authors = ["Carlos Zansavio"]
-title = "Building a CDC Streaming Pipeline locally""
+title = "Building a CDC Streaming Pipeline locally"
 date = "2026-07-05"
 description = "Let's build a CDC streaming pipeline locally."
 tags = [
