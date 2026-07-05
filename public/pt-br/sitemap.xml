@@ -2,32 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://carlos.sjdr.cloud/pt-br/</loc>
-    <lastmod>2025-09-08T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/"
-                />
-  </url><url>
-    <loc>http://carlos.sjdr.cloud/pt-br/posts/</loc>
-    <lastmod>2025-09-08T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/posts/"
-                />
-  </url><url>
     <loc>http://carlos.sjdr.cloud/pt-br/authors/</loc>
     <lastmod>2025-09-04T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -39,6 +13,19 @@
                 rel="alternate"
                 hreflang="pt-br"
                 href="http://carlos.sjdr.cloud/pt-br/authors/"
+                />
+  </url><url>
+    <loc>http://carlos.sjdr.cloud/pt-br/</loc>
+    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://carlos.sjdr.cloud/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://carlos.sjdr.cloud/pt-br/"
                 />
   </url><url>
     <loc>http://carlos.sjdr.cloud/pt-br/authors/carlos-zansavio/</loc>
@@ -71,26 +58,39 @@
     <lastmod>2025-09-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/tags/data-engineering/"
+                hreflang="pt-br"
+                href="http://carlos.sjdr.cloud/pt-br/tags/data-engineering/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/tags/data-engineering/"
+                hreflang="en"
+                href="http://carlos.sjdr.cloud/tags/data-engineering/"
                 />
   </url><url>
     <loc>http://carlos.sjdr.cloud/pt-br/posts/difference-between-data-warehouses-and-data-lakes/</loc>
     <lastmod>2025-09-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="pt-br"
+                href="http://carlos.sjdr.cloud/pt-br/posts/difference-between-data-warehouses-and-data-lakes/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="en"
                 href="http://carlos.sjdr.cloud/posts/difference-between-data-warehouses-and-data-lakes/"
+                />
+  </url><url>
+    <loc>http://carlos.sjdr.cloud/pt-br/posts/</loc>
+    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://carlos.sjdr.cloud/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/posts/difference-between-data-warehouses-and-data-lakes/"
+                href="http://carlos.sjdr.cloud/pt-br/posts/"
                 />
   </url><url>
     <loc>http://carlos.sjdr.cloud/pt-br/tags/</loc>
@@ -110,13 +110,13 @@
     <lastmod>2025-09-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/categories/tutorial/"
+                hreflang="pt-br"
+                href="http://carlos.sjdr.cloud/pt-br/categories/tutorial/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/categories/tutorial/"
+                hreflang="en"
+                href="http://carlos.sjdr.cloud/categories/tutorial/"
                 />
   </url><url>
     <loc>http://carlos.sjdr.cloud/pt-br/about/</loc>
@@ -136,13 +136,13 @@
     <lastmod>2023-01-05T01:15:52+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/authors/hugo-authors/"
+                hreflang="pt-br"
+                href="http://carlos.sjdr.cloud/pt-br/autores/autores-de-hugo/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/autores/autores-de-hugo/"
+                hreflang="en"
+                href="http://carlos.sjdr.cloud/authors/hugo-authors/"
                 />
   </url><url>
     <loc>http://carlos.sjdr.cloud/pt-br/categoria/temas/</loc>
@@ -181,13 +181,13 @@
     <loc>http://carlos.sjdr.cloud/pt-br/series/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/series/"
+                hreflang="pt-br"
+                href="http://carlos.sjdr.cloud/pt-br/series/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/series/"
+                hreflang="en"
+                href="http://carlos.sjdr.cloud/series/"
                 />
   </url>
 </urlset>

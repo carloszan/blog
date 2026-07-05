@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tutorial on carlos zansavio</title>
-    <link>http://carlos.sjdr.cloud/categories/tutorial/</link>
-    <description>Recent content in Tutorial on carlos zansavio</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 04 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://carlos.sjdr.cloud/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Difference between data warehouses and data lakehouses</title>
-      <link>http://carlos.sjdr.cloud/posts/difference-between-data-warehouses-and-data-lakes/</link>
-      <pubDate>Thu, 04 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://carlos.sjdr.cloud/posts/difference-between-data-warehouses-and-data-lakes/</guid>
-      <description>&lt;p&gt;This is a fundamental concept in data architecture. Here’s a clear breakdown of the differences between data warehouses and data lakes.&lt;/p&gt;&#xA;&lt;p&gt;Basically &lt;strong&gt;data warehouses&lt;/strong&gt; stores well structured data. So you can build a data warehouse with one or multiple SQL databases. On cloud, it could be, for example, Google BigQuery.&#xA;In this approach, you deal primarily with structured data that has been processed and transformed for a specific purpose. You just go there, get what you want and that&amp;rsquo;s it.&#xA;Companies can create data warehouses using SQL databases like Postgres or it can be a cloud solution.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Tutorial on carlos zansavio</title>
+		<link>http://carlos.sjdr.cloud/categories/tutorial/</link>
+		<description>Recent content in Tutorial on carlos zansavio</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 04 Sep 2025 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://carlos.sjdr.cloud/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Difference between data warehouses and data lakehouses</title>
+				<link>http://carlos.sjdr.cloud/posts/difference-between-data-warehouses-and-data-lakes/</link>
+				<pubDate>Thu, 04 Sep 2025 00:00:00 +0000</pubDate>
+				<guid>http://carlos.sjdr.cloud/posts/difference-between-data-warehouses-and-data-lakes/</guid>
+				<description>&lt;p&gt;This is a fundamental concept in data architecture. Here’s a clear breakdown of the differences between data warehouses and data lakes.&lt;/p&gt;&#xA;&lt;p&gt;Basically &lt;strong&gt;data warehouses&lt;/strong&gt; stores well structured data. So you can build a data warehouse with one or multiple SQL databases. On cloud, it could be, for example, Google BigQuery.&#xA;In this approach, you deal primarily with structured data that has been processed and transformed for a specific purpose. You just go there, get what you want and that&amp;rsquo;s it.&#xA;Companies can create data warehouses using SQL databases like Postgres or it can be a cloud solution.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>
