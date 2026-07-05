@@ -10,7 +10,7 @@ I am a curious and creative individual with diverse interests ranging from techn
 
 ## Skills and Interests
 
-* Technology: Expertise in using Apache Spark, Kubernetes, MongoDB, Prometheus, Grafana, and FastAPI. 
+* Technology: Expertise in Azure (Databricks, ADLS Gen2), Apache Spark, PySpark, Kubernetes, Delta Lake, SQL, Observability (Prometheus, Grafana), CI/CD.
 * Research: Conducting machine learning research in the health environment, with diseases like COVID-19.
 * Hobbies: Playing the scaleta, working out, and exploring Factorio.
 * Programming: Python

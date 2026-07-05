@@ -141,13 +141,13 @@
     <loc>http://carlos.sjdr.cloud/series/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/series/"
+                hreflang="en"
+                href="http://carlos.sjdr.cloud/series/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/series/"
+                hreflang="pt-br"
+                href="http://carlos.sjdr.cloud/pt-br/series/"
                 />
   </url>
 </urlset>
