@@ -40,7 +40,7 @@ This is a POC meant to run locally on your machine, not a production-grade setup
 - Delta Lake: This is where we'll build our OLAP layer. In a real production scenario, you'd store these Delta files in cloud blob storage (such as S3, Azure Blob Storage, R2). For this local POC, though, we'll just write everything to a `/tmp` folder on your machine. Good enough for testing.
 ## Design
 
-![CDC.drawio.png](CDC.drawio.png)
+![CDC.drawio.png](../CDC.drawio.png)
 ## About Debezium
 You might be wondering: how does Debezium actually capture those changes?
 
