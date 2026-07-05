@@ -11,6 +11,7 @@ categories = [
 ]
 series = ["series1"]
 aliases = ["aliases1"]
+draft = true
 +++
 
 # The problem

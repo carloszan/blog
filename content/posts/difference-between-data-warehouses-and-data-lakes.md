@@ -9,6 +9,7 @@ tags = [
 categories = [
     "tutorial",
 ]
+draft = true
 +++
 
 This is a fundamental concept in data architecture. Here’s a clear breakdown of the differences between data warehouses and data lakes.
