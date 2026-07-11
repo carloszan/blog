@@ -12,14 +12,11 @@ categories = [
 ]
 +++
 
-You've read the docs. You can write queries using SparkSQL or PySpark. You're pretty sure you understand how Spark works under the hood.
-
-Then an interviewer asks you to actually reason through a shuffle, and that confidence gets shaky fast.
+You've read the docs. You can write queries using SparkSQL or PySpark. You're pretty sure you understand how Spark works under the hood. Then an interviewer asks you to actually reason through a shuffle, and that confidence gets shaky fast.
 
 Been there.
 
 What actually got these concepts to stick for me was working through math problems tied to Spark's internals. You have to understand the mechanics or the numbers don't add up.
-
 So I put together a set of exercises built around exactly that.
 
 Full disclosure: I generated the first draft with AI, then went through the whole list myself to make sure every question actually holds up and reflects what gets asked in real interviews.
