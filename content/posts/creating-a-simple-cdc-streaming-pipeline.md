@@ -8,6 +8,7 @@ tags = [
 ]
 categories = [
     "tutorial",
+	"data"
 ]
 +++
 

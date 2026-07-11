@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Apache Spark exercises to test and improve your knowledge · carlos zansavio
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Carlos Zansavio">
+<meta name="description" content="Math exercises to test and improve your theoretical knowledge about Apache Spark">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Apache Spark exercises to test and improve your knowledge">
+	<meta name="twitter:description" content="Math exercises to test and improve your theoretical knowledge about Apache Spark">
+
+<meta property="og:url" content="http://carlos.sjdr.cloud/posts/apache-spark-exercises/">
+	<meta property="og:site_name" content="carlos zansavio">
+	<meta property="og:title" content="Apache Spark exercises to test and improve your knowledge">
+	<meta property="og:description" content="Math exercises to test and improve your theoretical knowledge about Apache Spark">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-07-11T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-07-11T00:00:00+00:00">
+		<meta property="article:tag" content="Exercise">
+		<meta property="article:tag" content="Data-Engineering">
+
+
+
+
+<link rel="canonical" href="http://carlos.sjdr.cloud/posts/apache-spark-exercises/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.f03d6359cf766772af14fbe07ce6aca734b321c2e15acba0bbf4e2254941c460.css" integrity="sha256-8D1jWc92Z3KvFPvgfOaspzSzIcLhWsugu/TiJUlBxGA=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.ad48f476275974885bdc03d5251e3cdbe1678c54a63ff772376b0ed2adc468dd.css" integrity="sha256-rUj0didZdIhb3APVJR482&#43;FnjFSmP/dyN2sO0q3EaN0=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://carlos.sjdr.cloud/">
+      carlos zansavio
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://carlos.sjdr.cloud/posts/apache-spark-exercises/">
+              Apache Spark exercises to test and improve your knowledge
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2026-07-11T00:00:00Z">
+                July 11, 2026
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              28-minute read
+            </span>
+          </div>
+          <div class="authors">
+  <i class="fa-solid fa-user" aria-hidden="true"></i>
+    <a href="/authors/carlos-zansavio/">Carlos Zansavio</a></div>
+
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/categories/data/">Data</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/exercise/">Exercise</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/data-engineering/">Data-Engineering</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>You&rsquo;ve read the docs. You can write queries using SparkSQL or PySpark. You&rsquo;re pretty sure you understand how Spark works under the hood.</p>
+<p>Then an interviewer asks you to actually reason through a shuffle, and that confidence gets shaky fast.</p>
+<p>Been there.</p>
+<p>What actually got these concepts to stick for me was working through math problems tied to Spark&rsquo;s internals. You have to understand the mechanics or the numbers don&rsquo;t add up.</p>
+<p>So I put together a set of exercises built around exactly that.</p>
+<p>Full disclosure: I generated the first draft with AI, then went through the whole list myself to make sure every question actually holds up and reflects what gets asked in real interviews.</p>
+<p>Stuck on a question? Check the solution. Still not clicking? Feed it to an AI and ask it to explain it differently. That’s what I did. It forced me to think about the gaps I didn&rsquo;t even know I had.</p>
+<p>Give it a try.</p>
+<h1 id="exercise-list-1">
+  Exercise List 1
+  <a class="heading-link" href="#exercise-list-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<hr>
+<h2 id="section-1--partitioning">
+  Section 1 — Partitioning
+  <a class="heading-link" href="#section-1--partitioning">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="exercise-11--basic-partition-count">
+  Exercise 1.1 — Basic partition count
+  <a class="heading-link" href="#exercise-11--basic-partition-count">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>You have a 500 GB dataset in S3 stored as uncompressed Parquet. Spark&rsquo;s default <code>spark.sql.files.maxPartitionBytes</code> is 128 MB. How many partitions will Spark create when reading this data?</p>
+<h3 id="exercise-12--compression-skews-the-math">
+  Exercise 1.2 — Compression skews the math
+  <a class="heading-link" href="#exercise-12--compression-skews-the-math">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Same 500 GB dataset, but now it&rsquo;s Snappy-compressed Parquet with a compression ratio of ~4:1 (i.e., 500 GB on disk decompresses to ~2 TB in memory). Spark decides partition count based on the <em>file size on disk</em>, not decompressed size. Explain why this can cause OOM errors on executors, and calculate the actual in-memory size per partition if the file-based partitioning still targets 128 MB per partition.</p>
+<h3 id="exercise-13--shuffle-partitions-sizing">
+  Exercise 1.3 — Shuffle partitions sizing
+  <a class="heading-link" href="#exercise-13--shuffle-partitions-sizing">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>You have a job whose shuffle stage will move 800 GB of data. You want each shuffle partition to land around 200 MB (a healthy target to avoid small-file problems downstream). What value should you set <code>spark.sql.shuffle.partitions</code> to?</p>
+<h3 id="exercise-14--too-many-small-partitions">
+  Exercise 1.4 — Too many small partitions
+  <a class="heading-link" href="#exercise-14--too-many-small-partitions">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>A DataFrame has 40,000 partitions, but the total data size is only 10 GB. What&rsquo;s the average partition size? What problem does this cause, and what&rsquo;s the fix (name the config or technique)?</p>
+<h3 id="exercise-15--repartition-vs-coalesce-cost">
+  Exercise 1.5 — Repartition vs coalesce cost
+  <a class="heading-link" href="#exercise-15--repartition-vs-coalesce-cost">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>You have a DataFrame with 2,000 partitions and want to reduce it to 200 for writing output. a) If you use <code>coalesce(200)</code>, does this trigger a full shuffle? b) If you use <code>repartition(200)</code>, does this trigger a full shuffle? c) Given 2,000 partitions merging into 200, roughly how many source partitions feed each target partition under <code>coalesce</code>, and why does this matter for skew?</p>
+<hr>
+<h2 id="section-2--memory-management">
+  Section 2 — Memory Management
+  <a class="heading-link" href="#section-2--memory-management">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="exercise-21--unified-memory-pool">
+  Exercise 2.1 — Unified memory pool
+  <a class="heading-link" href="#exercise-21--unified-memory-pool">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>An executor is launched with <code>--executor-memory 20g</code>. Default settings: <code>spark.memory.fraction = 0.6</code>, <code>spark.memory.storageFraction = 0.5</code>. a) How much memory is reserved for &ldquo;reserved memory&rdquo; (assume the standard 300 MB reserved)? b) How much is allocated to the unified memory pool (execution + storage)? c) How much is the minimum guaranteed storage memory within that pool?</p>
+<h3 id="exercise-22--executor-memory-overhead">
+  Exercise 2.2 — Executor memory overhead
+  <a class="heading-link" href="#exercise-22--executor-memory-overhead">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>You request <code>--executor-memory 16g</code>. Spark&rsquo;s default overhead formula is <code>max(384 MB, 0.10 * executorMemory)</code>. a) What is the overhead in this case? b) What is the <em>total</em> memory YARN/Kubernetes will actually reserve per executor? c) If your cluster node has 64 GB total RAM and you want to fit 4 executors per node, does 16 GB executor memory fit? Show the math including overhead.</p>
+<h3 id="exercise-23--broadcast-join-threshold">
+  Exercise 2.3 — Broadcast join threshold
+  <a class="heading-link" href="#exercise-23--broadcast-join-threshold">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><code>spark.sql.autoBroadcastJoinThreshold</code> is set to the default 10 MB. You&rsquo;re joining a fact table (2 TB) with a dimension table. The dimension table&rsquo;s Parquet file is 8 MB on disk but has a 3:1 in-memory expansion ratio when deserialized. a) Will Spark broadcast it automatically? What number does Spark actually compare against the threshold — file size or in-memory size? b) If broadcasting causes an executor OOM despite passing the threshold check, what&rsquo;s the likely explanation?</p>
+<h3 id="exercise-24--spill-estimation">
+  Exercise 2.4 — Spill estimation
+  <a class="heading-link" href="#exercise-24--spill-estimation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>A single executor has 4 cores and 8 GB usable execution memory (after overhead/reserved memory is subtracted). It&rsquo;s running a <code>groupByKey</code> aggregation where each of the 4 concurrent tasks needs to hold roughly 3 GB of shuffle data in memory to avoid spilling. a) Will this configuration spill to disk? Do the math. b) Name two ways to fix it without adding hardware.</p>
+<hr>
+<h2 id="section-3--cluster-sizing">
+  Section 3 — Cluster Sizing
+  <a class="heading-link" href="#section-3--cluster-sizing">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="exercise-31--executors-per-node">
+  Exercise 3.1 — Executors per node
+  <a class="heading-link" href="#exercise-31--executors-per-node">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>You have worker nodes with 128 GB RAM and 32 cores each. Best practice caps executor cores at 5 (to avoid HDFS I/O throughput issues) and leaves 1 core + ~1 GB per node for the OS/daemons. a) How many executors can you fit per node (core-wise)? b) Given that core constraint, how much memory should each executor get (ignore overhead for this step)? c) Recompute part (b) accounting for the default executor memory overhead (10%, min 384 MB).</p>
+<h3 id="exercise-32--total-parallelism">
+  Exercise 3.2 — Total parallelism
+  <a class="heading-link" href="#exercise-32--total-parallelism">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Using your answer from 3.1, if the cluster has 20 worker nodes, what is the total number of concurrent tasks the cluster can run at once?</p>
+<h3 id="exercise-33--right-sizing-for-a-job">
+  Exercise 3.3 — Right-sizing for a job
+  <a class="heading-link" href="#exercise-33--right-sizing-for-a-job">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>A batch job reads 3 TB of input data. You want each task to process ~256 MB of input (a reasonable target for CPU-bound transforms). a) How many tasks/partitions do you need? b) Using the cluster from 3.1/3.2 (total concurrent task slots), how many &ldquo;waves&rdquo; of tasks will this job run in? c) If each wave takes ~40 seconds, what&rsquo;s your rough total runtime estimate for just the map stage (ignore shuffle/scheduling overhead)?</p>
+<h3 id="exercise-34--skewed-partition-back-of-envelope">
+  Exercise 3.4 — Skewed partition, back-of-envelope
+  <a class="heading-link" href="#exercise-34--skewed-partition-back-of-envelope">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>A shuffle stage has 500 output partitions. 499 of them contain 400 MB each; one partition (due to a hot key) contains 60 GB. a) What&rsquo;s the total shuffle output size? b) If every other stage bottleneck is solved, roughly how much longer will the skewed task take vs. a normal task (assume throughput is constant per core)? c) Name two concrete techniques to fix this (one config-based via AQE, one manual).</p>
+<hr>
+<h2 id="section-4--mixed--rapid-fire-good-for-whiteboard-drills">
+  Section 4 — Mixed / Rapid-fire (good for whiteboard drills)
+  <a class="heading-link" href="#section-4--mixed--rapid-fire-good-for-whiteboard-drills">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ol>
+<li>A DataFrame has 1 billion rows, average row size 200 bytes. Estimate total in-memory size (uncompressed) and a reasonable partition count if targeting 128 MB/partition.</li>
+<li><code>spark.default.parallelism</code> is 200, but you&rsquo;re reading from a source with 1,000 input splits. Which value actually controls the number of partitions for the initial read stage?</li>
+<li>Your job has <code>spark.executor.instances=50</code>, <code>spark.executor.cores=4</code>. What&rsquo;s the max number of tasks that can run simultaneously cluster-wide (ignoring dynamic allocation)?</li>
+<li>You increase <code>spark.sql.shuffle.partitions</code> from 200 to 2000 on a job that shuffles only 5 GB. What&rsquo;s the average partition size now, and why might this hurt performance despite &ldquo;more parallelism&rdquo;?</li>
+<li>A 100 GB table is broadcast-joined against a 50 TB table. Each executor has 8 GB memory. If there are 200 executors, what&rsquo;s the memory overhead as a <em>percentage of total cluster memory</em> just from holding a copy of the broadcast table on every executor?</li>
+</ol>
+<hr>
+<h2 id="solutions">
+  Solutions
+  <a class="heading-link" href="#solutions">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="11">
+  1.1
+  <a class="heading-link" href="#11">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>500 GB / 128 MB ≈ 500,000 MB / 128 MB ≈ <strong>3,907 partitions</strong> (Spark rounds up, so ~3,908).</p>
+<h3 id="12">
+  1.2
+  <a class="heading-link" href="#12">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Spark&rsquo;s <code>maxPartitionBytes</code> operates on the <strong>on-disk file size</strong>, not the decompressed in-memory size, because partition planning happens before decompression. So targeting 128 MB per partition on-disk with a 4:1 expansion ratio means each partition actually holds <strong>~512 MB in memory</strong> once decompressed and deserialized. Multiply across many concurrent tasks per executor and you can blow past execution memory — this is a classic cause of Parquet/Snappy-related OOMs. Fix: lower <code>maxPartitionBytes</code> (e.g., to 32 MB) so the decompressed size per partition stays near the real target.</p>
+<h3 id="13">
+  1.3
+  <a class="heading-link" href="#13">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>800 GB / 200 MB ≈ 800,000 MB / 200 MB = <strong>4,000 shuffle partitions</strong>. Set <code>spark.sql.shuffle.partitions = 4000</code> (or let AQE&rsquo;s <code>coalescePartitions</code> handle it dynamically instead of hardcoding).</p>
+<h3 id="14">
+  1.4
+  <a class="heading-link" href="#14">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>10 GB / 40,000 = 0.25 MB per partition on average. This is the <strong>&ldquo;small files / small partitions&rdquo; problem</strong>: task scheduling overhead (each task has fixed overhead of a few ms to tens of ms for scheduling, serialization, etc.) dominates actual compute time, so the job spends more time on overhead than work. Fix: <code>coalesce()</code> to reduce partition count, or enable <strong>AQE with <code>spark.sql.adaptive.coalescePartitions.enabled=true</code></strong> to merge small shuffle partitions automatically.</p>
+<h3 id="15">
+  1.5
+  <a class="heading-link" href="#15">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>a) No — <code>coalesce()</code> avoids a full shuffle by combining existing partitions locally where possible (no shuffle stage boundary). b) Yes — <code>repartition()</code> always triggers a full shuffle since it needs to redistribute data evenly (uses round-robin or hash partitioning). c) Roughly 2,000 / 200 = <strong>10 source partitions per target partition</strong>. Because <code>coalesce</code> just groups existing partitions without rebalancing data volume, if the source partitions are unevenly sized, the merged output partitions inherit that imbalance — you can end up with skewed output partitions since there&rsquo;s no shuffle to even things out.</p>
+<h3 id="21">
+  2.1
+  <a class="heading-link" href="#21">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>a) Reserved memory: <strong>300 MB</strong> (fixed). b) Usable memory = 20 GB − 300 MB ≈ 19.7 GB. Unified pool = 0.6 × 19.7 GB ≈ <strong>11.82 GB</strong>. c) Minimum guaranteed storage memory = storageFraction × unified pool = 0.5 × 11.82 GB ≈ <strong>5.91 GB</strong>.</p>
+<h3 id="22">
+  2.2
+  <a class="heading-link" href="#22">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>a) Overhead = max(384 MB, 0.10 × 16 GB) = max(384 MB, 1.6 GB) = <strong>1.6 GB</strong>. b) Total reserved = 16 GB + 1.6 GB = <strong>17.6 GB</strong>. c) 4 executors × 17.6 GB = 70.4 GB &gt; 64 GB node capacity. <strong>It does not fit</strong> — you&rsquo;d need to drop to 3 executors/node (52.8 GB, leaving headroom for OS) or reduce executor memory.</p>
+<h3 id="23">
+  2.3
+  <a class="heading-link" href="#23">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>a) Spark compares the <strong>in-memory (deserialized) estimated size</strong>, not the on-disk file size, when deciding whether to broadcast (it uses stats from the query plan / table statistics). At 3:1 expansion, 8 MB on disk ≈ <strong>24 MB in memory</strong>, which exceeds the 10 MB threshold — so Spark would <strong>not</strong> auto-broadcast it in this case (this is the reverse of the classic mistake of assuming file size = broadcast size). b) If it does get broadcast (e.g., via explicit <code>broadcast()</code> hint) and OOMs anyway, likely causes: the estimate/statistics were stale or wrong (e.g., no recent <code>ANALYZE TABLE</code>), or the broadcast is being held on every executor <em>simultaneously</em> while other memory-heavy operations are also running, exceeding the driver&rsquo;s or executor&rsquo;s available memory — broadcast variables also first collect to the <strong>driver</strong>, which can OOM there before it even reaches executors.</p>
+<h3 id="24">
+  2.4
+  <a class="heading-link" href="#24">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>a) 4 concurrent tasks × 3 GB each = 12 GB needed, but only 8 GB execution memory available. <strong>12 GB &gt; 8 GB → yes, it will spill to disk.</strong> b) Options: (1) reduce <code>spark.executor.cores</code> (fewer concurrent tasks per executor, e.g., 2 instead of 4, so only 6 GB is needed concurrently), or (2) increase <code>spark.memory.fraction</code> / reduce storage usage to give execution memory more room, or (3) use <code>reduceByKey</code>/<code>aggregateByKey</code> instead of <code>groupByKey</code> to reduce the amount of data held in memory per key via map-side combining.</p>
+<h3 id="31">
+  3.1
+  <a class="heading-link" href="#31">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>a) 32 cores total, minus 1 for OS = 31 available. 31 / 5 cores per executor = <strong>6 executors per node</strong> (with 1 core left idle/spare). b) 128 GB − ~1 GB OS reserve = 127 GB / 6 executors ≈ <strong>21.16 GB per executor</strong> (before overhead). c) Solve for <code>executorMemory</code> where <code>executorMemory + max(384MB, 0.10 × executorMemory) = 21.16 GB</code>. Approximate: <code>1.10 × executorMemory ≈ 21.16 GB</code> → executorMemory ≈ <strong>19.2 GB</strong>, overhead ≈ 1.92 GB, total ≈ 21.1 GB. (In practice you&rsquo;d round down to something clean like 19 GB.)</p>
+<h3 id="32">
+  3.2
+  <a class="heading-link" href="#32">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>6 executors/node × 5 cores/executor × 20 nodes = <strong>600 concurrent task slots</strong>.</p>
+<h3 id="33">
+  3.3
+  <a class="heading-link" href="#33">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>a) 3 TB / 256 MB = 3,000,000 MB / 256 MB ≈ <strong>11,719 tasks/partitions</strong>. b) 11,719 / 600 slots ≈ <strong>19.5 → 20 waves</strong>. c) 20 waves × 40 sec ≈ <strong>800 seconds (~13.3 minutes)</strong> for the map stage alone.</p>
+<h3 id="34">
+  3.4
+  <a class="heading-link" href="#34">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>a) 499 × 400 MB + 60 GB = 199.6 GB + 60 GB = <strong>~259.6 GB total shuffle output</strong>. b) Normal task processes 400 MB; skewed task processes 60 GB = 60,000 MB. Ratio = 60,000 / 400 = <strong>150x longer</strong> — the skewed task alone could dominate the entire stage&rsquo;s wall-clock time since all other tasks finish and the job waits on this one straggler. c) (1) <strong>AQE skew join optimization</strong> — <code>spark.sql.adaptive.skewJoin.enabled=true</code>, which automatically splits oversized partitions into smaller sub-partitions during a join. (2) <strong>Manual salting</strong> — add a random &ldquo;salt&rdquo; key to the skewed join key, splitting the hot key into N sub-keys distributed across partitions, then aggregate/de-salt afterward.</p>
+<h3 id="rapid-fire-answers">
+  Rapid-fire answers
+  <a class="heading-link" href="#rapid-fire-answers">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol>
+<li>1e9 rows × 200 bytes = 200 GB. 200,000 MB / 128 MB ≈ <strong>1,563 partitions</strong>.</li>
+<li>For file-based sources, the <strong>input split count / <code>maxPartitionBytes</code></strong> governs initial partitions — not <code>spark.default.parallelism</code> (that config mainly affects RDD operations without explicit partitioning, like parallelize, and non-file-based shuffles when AQE/shuffle partition count isn&rsquo;t otherwise set).</li>
+<li>50 × 4 = <strong>200 concurrent tasks</strong>.</li>
+<li>5 GB / 2000 ≈ 2.5 MB/partition — far too small. This causes <strong>task scheduling overhead to dominate</strong>: thousands of tiny tasks each pay fixed per-task overhead (serialization, scheduler latency, executor communication), so total overhead time can exceed actual compute time despite nominal &ldquo;parallelism.&rdquo;</li>
+<li>Broadcast table held on every executor: 100 GB × 200 = 20 TB, but that&rsquo;s clearly unrealistic for 8 GB executors (100 GB wouldn&rsquo;t even broadcast — it&rsquo;s way above threshold and wouldn&rsquo;t fit in one executor&rsquo;s memory anyway). The real lesson: total cluster memory = 200 × 8 GB = 1.6 TB. Broadcasting <em>any</em> table means every executor pays that memory cost simultaneously, so broadcast is only viable for genuinely small dimension tables (typically under a few hundred MB) — this exercise is a trick question to test whether you catch that 100 GB is never a realistic broadcast candidate regardless of cluster size.</li>
+</ol>
+<hr>
+<h1 id="exercise-list-2">
+  Exercise List 2
+  <a class="heading-link" href="#exercise-list-2">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<hr>
+<h2 id="part-1--partition-calculations">
+  Part 1 — Partition Calculations
+  <a class="heading-link" href="#part-1--partition-calculations">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="exercise-1--initial-partitions">
+  Exercise 1 — Initial Partitions
+  <a class="heading-link" href="#exercise-1--initial-partitions">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>You have a CSV file of <strong>1.2 TB</strong> stored in HDFS. HDFS block size = <strong>256 MB</strong>. You load it with <code>spark.read.csv(...)</code>.</p>
+<ol>
+<li>How many input partitions will Spark create?</li>
+<li>If you have 80 executors with 5 cores each, how many tasks can run simultaneously?</li>
+<li>How many waves of tasks are needed?</li>
+<li>If every task takes 45 seconds, estimate the total stage duration (ignore scheduling overhead).</li>
+</ol>
+<h3 id="exercise-2--repartition">
+  Exercise 2 — repartition()
+  <a class="heading-link" href="#exercise-2--repartition">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>A DataFrame currently has <strong>180 partitions</strong>. You execute <code>df2 = df.repartition(600)</code>.</p>
+<ol>
+<li>Will this trigger a shuffle?</li>
+<li>How many output partitions exist?</li>
+<li>If the dataset size is 900 GB, what is the average partition size?</li>
+<li>Why might this be a bad idea?</li>
+</ol>
+<h3 id="exercise-3--coalesce">
+  Exercise 3 — coalesce()
+  <a class="heading-link" href="#exercise-3--coalesce">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>A DataFrame has <strong>1200 partitions</strong>. You execute <code>df2 = df.coalesce(300)</code>.</p>
+<ol>
+<li>Does Spark shuffle?</li>
+<li>Why is coalesce faster than repartition here?</li>
+<li>Under what situation would coalesce produce skewed partitions?</li>
+</ol>
+<hr>
+<h2 id="part-2--shuffle-calculations">
+  Part 2 — Shuffle Calculations
+  <a class="heading-link" href="#part-2--shuffle-calculations">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="exercise-4--groupby-shuffle">
+  Exercise 4 — GroupBy Shuffle
+  <a class="heading-link" href="#exercise-4--groupby-shuffle">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Dataset: <strong>2 TB</strong>, 500 partitions. You execute <code>df.groupBy(&quot;country&quot;).count()</code> with <code>spark.sql.shuffle.partitions = 400</code>.</p>
+<ol>
+<li>Is a shuffle required?</li>
+<li>Approximately how much data moves across the network?</li>
+<li>What determines the number of reduce tasks?</li>
+<li>How many output partitions exist?</li>
+</ol>
+<h3 id="exercise-5--join-shuffle">
+  Exercise 5 — Join Shuffle
+  <a class="heading-link" href="#exercise-5--join-shuffle">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Table A: 400 GB, 200 partitions. Table B: 600 GB, 300 partitions. You perform <code>A.join(B, &quot;customer_id&quot;)</code>.</p>
+<ol>
+<li>Does Spark shuffle both tables?</li>
+<li>Approximately how much data is shuffled?</li>
+<li>How many shuffle stages exist?</li>
+</ol>
+<hr>
+<h2 id="part-3--broadcast-join">
+  Part 3 — Broadcast Join
+  <a class="heading-link" href="#part-3--broadcast-join">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="exercise-6">
+  Exercise 6
+  <a class="heading-link" href="#exercise-6">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Table A = 800 GB, Table B = 8 MB, broadcast threshold = 10 MB.</p>
+<ol>
+<li>Which join strategy should Spark use?</li>
+<li>Is there a shuffle?</li>
+<li>How many copies of Table B exist if there are 100 executors?</li>
+</ol>
+<h3 id="exercise-7">
+  Exercise 7
+  <a class="heading-link" href="#exercise-7">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Table A = 300 GB, Table B = 25 MB, broadcast threshold = 10 MB.</p>
+<ol>
+<li>Will Spark broadcast automatically?</li>
+<li>Could you force broadcasting?</li>
+<li>What are the risks?</li>
+</ol>
+<hr>
+<h2 id="part-4--memory">
+  Part 4 — Memory
+  <a class="heading-link" href="#part-4--memory">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="exercise-8">
+  Exercise 8
+  <a class="heading-link" href="#exercise-8">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Executor config: 8 GB executor memory, 4 cores. Spark storage fraction = 50%.</p>
+<ol>
+<li>How much memory is available for storage?</li>
+<li>How much for execution?</li>
+<li>If cached data occupies 5 GB, what happens?</li>
+</ol>
+<h3 id="exercise-9">
+  Exercise 9
+  <a class="heading-link" href="#exercise-9">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Executor: 16 GB, 8 cores. Task memory usage: 900 MB per task.</p>
+<ol>
+<li>Can all 8 tasks run simultaneously?</li>
+<li>Estimate total task memory required.</li>
+<li>What happens if memory exceeds available execution memory?</li>
+</ol>
+<hr>
+<h2 id="part-5--cluster-utilization">
+  Part 5 — Cluster Utilization
+  <a class="heading-link" href="#part-5--cluster-utilization">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="exercise-10">
+  Exercise 10
+  <a class="heading-link" href="#exercise-10">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Cluster: 20 workers, each with 16 cores / 64 GB RAM. Executors: 4 cores, 16 GB.</p>
+<ol>
+<li>How many executors per worker?</li>
+<li>Total executors?</li>
+<li>Total parallel tasks?</li>
+<li>Total executor memory?</li>
+</ol>
+<hr>
+<h2 id="part-6--stage-counting">
+  Part 6 — Stage Counting
+  <a class="heading-link" href="#part-6--stage-counting">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="exercise-11">
+  Exercise 11
+  <a class="heading-link" href="#exercise-11">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">parquet</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">df</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">parquet</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span></span></code></pre></div><ol>
+<li>How many stages?</li>
+<li>Where does the shuffle happen?</li>
+<li>Which transformations are narrow?</li>
+<li>Which are wide?</li>
+</ol>
+<h3 id="exercise-12">
+  Exercise 12
+  <a class="heading-link" href="#exercise-12">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df1</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="s2">&#34;id&#34;</span><span class="p">)</span> \
+</span></span><span class="line"><span class="cl">   <span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s2">&#34;country&#34;</span><span class="p">)</span> \
+</span></span><span class="line"><span class="cl">   <span class="o">.</span><span class="n">count</span><span class="p">()</span> \
+</span></span><span class="line"><span class="cl">   <span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s2">&#34;count&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><ol>
+<li>How many shuffles?</li>
+<li>How many stages?</li>
+<li>Which operation is the most expensive?</li>
+</ol>
+<hr>
+<h2 id="part-7--data-skew">
+  Part 7 — Data Skew
+  <a class="heading-link" href="#part-7--data-skew">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="exercise-13">
+  Exercise 13
+  <a class="heading-link" href="#exercise-13">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Dataset: 100 million rows. Distribution: USA 90M, Canada 5M, Mexico 5M.</p>
+<ol>
+<li>Why is this skew?</li>
+<li>Which partition becomes the bottleneck?</li>
+<li>Suggest three ways to fix it.</li>
+</ol>
+<h3 id="exercise-14">
+  Exercise 14
+  <a class="heading-link" href="#exercise-14">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>After a join, you observe these partition sizes: 300 MB, 290 MB, 310 MB, 305 MB, <strong>7.8 GB</strong>, 295 MB.</p>
+<ol>
+<li>What is happening?</li>
+<li>Why will one task run much longer?</li>
+<li>Suggest two Spark techniques to mitigate this.</li>
+</ol>
+<hr>
+<h2 id="part-8--file-size-problems">
+  Part 8 — File Size Problems
+  <a class="heading-link" href="#part-8--file-size-problems">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="exercise-15">
+  Exercise 15
+  <a class="heading-link" href="#exercise-15">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>A job writes <strong>18,000 parquet files</strong>, each <strong>3 MB</strong>.</p>
+<ol>
+<li>Why is this inefficient?</li>
+<li>How many partitions likely existed before writing?</li>
+<li>How could you produce ~256 MB output files?</li>
+</ol>
+<h3 id="exercise-16">
+  Exercise 16
+  <a class="heading-link" href="#exercise-16">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Dataset size: 640 GB. Desired output file size: 256 MB.</p>
+<ol>
+<li>How many output partitions should you use?</li>
+<li>Which transformation would you use before writing?</li>
+</ol>
+<hr>
+<h2 id="part-9--dag-reasoning">
+  Part 9 — DAG Reasoning
+  <a class="heading-link" href="#part-9--dag-reasoning">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="exercise-17">
+  Exercise 17
+  <a class="heading-link" href="#exercise-17">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">parquet</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">country</span> <span class="o">==</span> <span class="s2">&#34;US&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s2">&#34;city&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="s2">&#34;count&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">df</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><ol>
+<li>Draw the DAG.</li>
+<li>Where do stage boundaries occur?</li>
+<li>Which operations are pipelined?</li>
+<li>Which operations force a shuffle?</li>
+</ol>
+<hr>
+<h2 id="part-10--advanced-interview-math">
+  Part 10 — Advanced Interview Math
+  <a class="heading-link" href="#part-10--advanced-interview-math">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="exercise-18">
+  Exercise 18
+  <a class="heading-link" href="#exercise-18">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Cluster: 25 executors, 6 cores each. Dataset: 1.5 TB. Partition size: 128 MB. Each task: 55 seconds.</p>
+<ol>
+<li>Number of partitions?</li>
+<li>Maximum parallelism?</li>
+<li>Number of task waves?</li>
+<li>Approximate execution time?</li>
+</ol>
+<h3 id="exercise-19">
+  Exercise 19
+  <a class="heading-link" href="#exercise-19">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>You have 600 partitions, average size 1 GB.</p>
+<ol>
+<li>Is this a good partition size?</li>
+<li>Recommend a better partition count.</li>
+<li>Explain why.</li>
+</ol>
+<h3 id="exercise-20">
+  Exercise 20
+  <a class="heading-link" href="#exercise-20">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Fact table: 8 TB. Dimension table: 150 MB.</p>
+<ol>
+<li>Would Spark broadcast automatically?</li>
+<li>Should you force a broadcast?</li>
+<li>Estimate network traffic with and without broadcasting.</li>
+<li>Which solution scales better?</li>
+</ol>
+<hr>
+<h2 id="bonus-real-interview-challenge">
+  Bonus: Real Interview Challenge
+  <a class="heading-link" href="#bonus-real-interview-challenge">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>A company has:</p>
+<ul>
+<li>12-node cluster</li>
+<li>Each node: 32 cores, 128 GB RAM</li>
+<li>Executor configuration: 8 cores, 24 GB RAM</li>
+<li>Dataset: 9.6 TB</li>
+<li>HDFS block size: 256 MB</li>
+<li><code>spark.sql.shuffle.partitions = 200</code></li>
+<li>A <code>groupBy(user_id)</code> causes a shuffle</li>
+<li>The output is written to Parquet with one file per partition</li>
+</ul>
+<p>Without running the job, answer:</p>
+<ol>
+<li>How many executors run in the cluster?</li>
+<li>What is the maximum task parallelism?</li>
+<li>How many input partitions are created from the dataset?</li>
+<li>How many waves of map tasks are required?</li>
+<li>How many reduce tasks will execute after the shuffle?</li>
+<li>Approximately how large is each output file?</li>
+<li>What performance issues do you anticipate?</li>
+<li>How would you tune the job to improve throughput?</li>
+<li>If one <code>user_id</code> accounts for 40% of all rows, what issue could arise?</li>
+<li>How would you detect and mitigate that issue?</li>
+</ol>
+<hr>
+<h2 id="solutions-1">
+  Solutions
+  <a class="heading-link" href="#solutions-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="part-1--partition-calculations-1">
+  Part 1 — Partition Calculations
+  <a class="heading-link" href="#part-1--partition-calculations-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="exercise-1">
+  Exercise 1
+  <a class="heading-link" href="#exercise-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ol>
+<li>1.2 TB ≈ 1,200,000 MB. 1,200,000 / 256 ≈ <strong>4,688 partitions</strong>.</li>
+<li>80 executors × 5 cores = <strong>400 concurrent tasks</strong>.</li>
+<li>Waves = ceil(4,688 / 400) = <strong>12 waves</strong>.</li>
+<li>12 waves × 45 sec = <strong>540 seconds (~9 minutes)</strong>.</li>
+</ol>
+<h4 id="exercise-2">
+  Exercise 2
+  <a class="heading-link" href="#exercise-2">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ol>
+<li><strong>Yes</strong> — <code>repartition()</code> always triggers a full shuffle, regardless of whether you&rsquo;re going up or down in partition count.</li>
+<li><strong>600 output partitions.</strong></li>
+<li>900 GB / 600 ≈ <strong>1.5 GB per partition</strong> (still larger than the ~128–200 MB sweet spot).</li>
+<li>It&rsquo;s potentially wasteful: you pay the cost of a full network shuffle of 900 GB just to change partition count, and the result (1.5 GB/partition) is still too coarse for good parallelism. A cheaper option — like tuning <code>maxPartitionBytes</code> at read time, or <code>coalesce()</code> if reducing partitions — might get a similar or better result without the shuffle cost. If the goal really is to <em>increase</em> parallelism, going to 600 was also probably not enough; a partition count based on <code>datasetSize / targetPartitionSize</code> (e.g., 900 GB / 200 MB ≈ 4,500) would be more principled.</li>
+</ol>
+<h4 id="exercise-3">
+  Exercise 3
+  <a class="heading-link" href="#exercise-3">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ol>
+<li><strong>No</strong> — <code>coalesce()</code> avoids a full shuffle; it merges existing partitions locally (data doesn&rsquo;t need to move across the network in the general case).</li>
+<li>Because it doesn&rsquo;t require the network shuffle-write/shuffle-read machinery — it just combines adjacent partitions in place, so it&rsquo;s far cheaper in I/O and network terms.</li>
+<li>If the 1,200 source partitions are unevenly sized to begin with, <code>coalesce</code> merges roughly 1,200/300 = 4 source partitions per output partition <strong>without rebalancing data volume</strong>. Since there&rsquo;s no shuffle to even things out, any pre-existing imbalance carries straight through into the output partitions — producing skew.</li>
+</ol>
+<hr>
+<h3 id="part-2--shuffle-calculations-1">
+  Part 2 — Shuffle Calculations
+  <a class="heading-link" href="#part-2--shuffle-calculations-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="exercise-4">
+  Exercise 4
+  <a class="heading-link" href="#exercise-4">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ol>
+<li><strong>Yes</strong> — <code>groupBy</code> is a wide transformation and always requires a shuffle.</li>
+<li>Spark performs <strong>map-side partial aggregation</strong> before shuffling (similar to a combiner), so the actual network traffic is much less than the full 2 TB — it&rsquo;s roughly proportional to <code>(number of distinct countries) × (number of source partitions)</code>, i.e. small, since only partial counts per key per partition get shuffled rather than raw rows.</li>
+<li>The number of reduce tasks is determined by <strong><code>spark.sql.shuffle.partitions</code></strong>.</li>
+<li><strong>400 output partitions</strong> (set directly by <code>spark.sql.shuffle.partitions = 400</code>).</li>
+</ol>
+<h4 id="exercise-5">
+  Exercise 5
+  <a class="heading-link" href="#exercise-5">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ol>
+<li><strong>Yes</strong>, in a standard sort-merge join (no broadcast), both sides are shuffled and repartitioned by the join key.</li>
+<li>Roughly <strong>400 GB + 600 GB = 1 TB</strong> moved across the network (both tables get shuffled).</li>
+<li>Conceptually <strong>2 shuffle-write stages</strong> (one per source table) feeding into <strong>1 shuffle-read/join stage</strong> — so 3 stages total are involved in the join, often described loosely as &ldquo;2 shuffles.&rdquo;</li>
+</ol>
+<hr>
+<h3 id="part-3--broadcast-join-1">
+  Part 3 — Broadcast Join
+  <a class="heading-link" href="#part-3--broadcast-join-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="exercise-6-1">
+  Exercise 6
+  <a class="heading-link" href="#exercise-6-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ol>
+<li><strong>Broadcast hash join</strong> — Table B (8 MB) is under the 10 MB threshold.</li>
+<li><strong>No shuffle</strong> — Table A is read/processed locally per partition; only Table B is sent to every executor.</li>
+<li><strong>100 copies</strong> — one full copy of Table B is held in memory on each of the 100 executors.</li>
+</ol>
+<h4 id="exercise-7-1">
+  Exercise 7
+  <a class="heading-link" href="#exercise-7-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ol>
+<li><strong>No</strong> — 25 MB exceeds the 10 MB <code>autoBroadcastJoinThreshold</code>.</li>
+<li><strong>Yes</strong>, via an explicit <code>broadcast(B)</code> hint.</li>
+<li>Risks: the broadcast table must first be collected to the <strong>driver</strong>, which can OOM if the driver has limited memory; each executor then also holds a full copy in memory simultaneously, adding memory pressure that competes with execution/storage memory; if the actual in-memory (deserialized) size is much larger than the on-disk size, the &ldquo;small&rdquo; table might not be as small as it looks.</li>
+</ol>
+<hr>
+<h3 id="part-4--memory-1">
+  Part 4 — Memory
+  <a class="heading-link" href="#part-4--memory-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="exercise-8-1">
+  Exercise 8
+  <a class="heading-link" href="#exercise-8-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>Using Spark defaults: reserved memory = 300 MB, <code>spark.memory.fraction = 0.6</code>.</p>
+<ul>
+<li>Usable memory = 8 GB − 300 MB ≈ 7.71 GB</li>
+<li>Unified memory pool = 0.6 × 7.71 GB ≈ <strong>4.63 GB</strong></li>
+<li>With storage fraction = 50%:</li>
+</ul>
+<ol>
+<li>Storage memory: guaranteed minimum ≈ <strong>2.31 GB</strong>, but can borrow up to the full unified pool (~4.63 GB) if execution isn&rsquo;t using it.</li>
+<li>Execution memory: same split — guaranteed minimum ≈ <strong>2.31 GB</strong>, borrowable up to ~4.63 GB.</li>
+<li>5 GB of cached data <strong>exceeds the entire unified pool (~4.63 GB)</strong>. Spark will evict older cached blocks (LRU eviction) to make room, or — depending on the storage level (e.g., <code>MEMORY_AND_DISK</code>) — spill the excess to disk. If the storage level is memory-only, evicted partitions are simply dropped and recomputed on demand when needed again.</li>
+</ol>
+<h4 id="exercise-9-1">
+  Exercise 9
+  <a class="heading-link" href="#exercise-9-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ul>
+<li>Usable memory = 16 GB − 300 MB ≈ 15.71 GB</li>
+<li>Unified pool = 0.6 × 15.71 GB ≈ <strong>9.42 GB</strong></li>
+</ul>
+<ol>
+<li>8 tasks × 900 MB = <strong>7.2 GB</strong> needed concurrently. Since execution memory can borrow the full unified pool (~9.42 GB) when storage isn&rsquo;t competing for it, <strong>yes, all 8 tasks can run simultaneously</strong> — 7.2 GB fits comfortably under 9.42 GB. (If significant caching is also happening at the same time, it&rsquo;s tighter, since the guaranteed execution-only minimum is roughly half of that, ~4.7 GB.)</li>
+<li><strong>7.2 GB total.</strong></li>
+<li>If required memory exceeds what&rsquo;s available, Spark <strong>spills</strong> the relevant data structures (e.g., hash maps for aggregation, sort buffers) to disk rather than failing outright — this is slower but avoids an OOM in most cases. If spilling isn&rsquo;t possible for some reason (or disk is also exhausted), the task will fail with an OOM error.</li>
+</ol>
+<hr>
+<h3 id="part-5--cluster-utilization-1">
+  Part 5 — Cluster Utilization
+  <a class="heading-link" href="#part-5--cluster-utilization-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="exercise-10-1">
+  Exercise 10
+  <a class="heading-link" href="#exercise-10-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ol>
+<li>16 cores / 4 cores per executor = <strong>4 executors per worker</strong> (memory check: 4 × 16 GB = 64 GB, which uses 100% of node RAM — tight, with no headroom for the OS in practice, but arithmetically it fits).</li>
+<li>Total executors = 20 workers × 4 = <strong>80 executors</strong>.</li>
+<li>Total parallel tasks = 80 × 4 cores = <strong>320 tasks</strong>.</li>
+<li>Total executor memory = 80 × 16 GB = <strong>1,280 GB (1.28 TB)</strong>.</li>
+</ol>
+<hr>
+<h3 id="part-6--stage-counting-1">
+  Part 6 — Stage Counting
+  <a class="heading-link" href="#part-6--stage-counting-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="exercise-11-1">
+  Exercise 11
+  <a class="heading-link" href="#exercise-11-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ol>
+<li><strong>2 stages.</strong></li>
+<li>The shuffle happens at <code>groupBy(...).sum()</code> — the only wide transformation in the chain.</li>
+<li>Narrow: <code>filter(...)</code>, <code>select(...)</code> (and the final map-side portion of the write).</li>
+<li>Wide: <code>groupBy(...).sum()</code>.</li>
+</ol>
+<h4 id="exercise-12-1">
+  Exercise 12
+  <a class="heading-link" href="#exercise-12-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ol>
+<li><strong>3 shuffle boundaries</strong>: the join (<code>join</code>), the <code>groupBy</code>, and the <code>sort</code> (a global <code>orderBy</code> requires range partitioning, which is itself a shuffle).</li>
+<li>Roughly <strong>5 stages</strong>: a map stage each for reading <code>df1</code> and <code>df2</code> (2 stages, can run in parallel), a stage for the join result, a stage for the groupBy/count result, and a final stage for the sort.</li>
+<li>The <strong>sort (<code>orderBy</code>)</strong> is typically the most expensive in practice — it requires a full shuffle <em>plus</em> range-partitioning/sampling to establish global ordering across partitions, on top of whatever cost the join and groupBy already incurred. In some cases the join is the single costliest step if the joined tables are very large — worth stating both and explaining your reasoning in an interview.</li>
+</ol>
+<hr>
+<h3 id="part-7--data-skew-1">
+  Part 7 — Data Skew
+  <a class="heading-link" href="#part-7--data-skew-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="exercise-13-1">
+  Exercise 13
+  <a class="heading-link" href="#exercise-13-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ol>
+<li>This is skew because <strong>90% of the rows share a single key</strong> (&ldquo;USA&rdquo;), producing an extremely uneven key distribution.</li>
+<li>The partition/task handling the &ldquo;USA&rdquo; key becomes the <strong>bottleneck</strong> — it has to process ~18x more data than the Canada or Mexico partitions.</li>
+<li>Three fixes:
+<ul>
+<li><strong>Salting</strong>: append a random suffix to the skewed key, splitting &ldquo;USA&rdquo; into several sub-keys spread across partitions, aggregate, then combine the sub-results.</li>
+<li><strong>AQE skew join handling</strong> (<code>spark.sql.adaptive.skewJoin.enabled=true</code>), which automatically detects and splits oversized partitions.</li>
+<li><strong>Two-phase / partial aggregation</strong>: pre-aggregate locally before the shuffle to shrink the amount of skewed data that needs to move, or isolate the hot key and process it separately (e.g., filter it out, handle with different parallelism, union results back).</li>
+</ul>
+</li>
+</ol>
+<h4 id="exercise-14-1">
+  Exercise 14
+  <a class="heading-link" href="#exercise-14-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ol>
+<li>This is <strong>data skew</strong> — one partition (7.8 GB) is dramatically larger than the rest (~300 MB), almost certainly due to a hot key concentrated there after the join.</li>
+<li>Task duration is roughly proportional to data volume per core. 7.8 GB vs ~300 MB is about a <strong>26x</strong> difference (7,800 MB / 300 MB ≈ 26), so that task will take roughly 26x longer than a normal task and become the straggler the whole stage waits on.</li>
+<li>Two techniques: <strong>AQE skew join optimization</strong> (auto-splits the skewed partition into smaller pieces during the join) and <strong>manual salting</strong> of the join key.</li>
+</ol>
+<hr>
+<h3 id="part-8--file-size-problems-1">
+  Part 8 — File Size Problems
+  <a class="heading-link" href="#part-8--file-size-problems-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="exercise-15-1">
+  Exercise 15
+  <a class="heading-link" href="#exercise-15-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ol>
+<li>This is the classic <strong>small-file problem</strong>: 18,000 tiny files create heavy metadata overhead (NameNode/S3 listing costs), and reading/writing many small files incurs per-file open/close overhead that dominates actual I/O time — very inefficient compared to fewer, larger files.</li>
+<li>Roughly <strong>18,000 partitions</strong> existed at write time (Spark typically writes one file per partition per task, absent additional file-splitting settings).</li>
+<li>Total data = 18,000 × 3 MB = 54,000 MB (54 GB). Target partitions = 54,000 / 256 ≈ <strong>211 partitions</strong>. So <code>coalesce(211)</code> (or <code>repartition(211)</code>) before writing would produce ~256 MB files. Alternatively, use a table format with compaction support (Delta/Iceberg <code>OPTIMIZE</code>) to fix it after the fact.</li>
+</ol>
+<h4 id="exercise-16-1">
+  Exercise 16
+  <a class="heading-link" href="#exercise-16-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ol>
+<li>640 GB / 256 MB = 640,000 MB / 256 MB ≈ <strong>2,500 partitions</strong>.</li>
+<li>Use <strong><code>repartition(2500)</code></strong> before the write (or <code>coalesce(2500)</code> if you&rsquo;re reducing from a higher existing partition count and don&rsquo;t need the data rebalanced evenly — <code>repartition</code> is generally the safer choice here since it evens out the size distribution across the new partition count).</li>
+</ol>
+<hr>
+<h3 id="part-9--dag-reasoning-1">
+  Part 9 — DAG Reasoning
+  <a class="heading-link" href="#part-9--dag-reasoning-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="exercise-17-1">
+  Exercise 17
+  <a class="heading-link" href="#exercise-17-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ol>
+<li><strong>DAG shape</strong>: <code>read → filter → filter → withColumn</code> are all narrow and pipeline together into a single stage. <code>groupBy(&quot;city&quot;).count()</code> is a wide transformation, creating a shuffle boundary. <code>orderBy(&quot;count&quot;)</code> is also wide (global sort requires range partitioning), creating a second shuffle boundary. <code>show()</code> is the action that triggers the whole DAG to execute.</li>
+<li><strong>Stage boundaries</strong>: at <code>groupBy</code> (shuffle #1) and at <code>orderBy</code> (shuffle #2) — so <strong>3 stages total</strong>.</li>
+<li><strong>Pipelined (narrow) operations</strong>: <code>read</code>, <code>filter(age &gt; 20)</code>, <code>filter(country == &quot;US&quot;)</code>, <code>withColumn(...)</code> — all execute together within one stage without moving data across the network.</li>
+<li><strong>Force a shuffle</strong>: <code>groupBy(&quot;city&quot;).count()</code> and <code>orderBy(&quot;count&quot;)</code>.</li>
+</ol>
+<hr>
+<h3 id="part-10--advanced-interview-math-1">
+  Part 10 — Advanced Interview Math
+  <a class="heading-link" href="#part-10--advanced-interview-math-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="exercise-18-1">
+  Exercise 18
+  <a class="heading-link" href="#exercise-18-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ol>
+<li>1.5 TB / 128 MB = 1,500,000 MB / 128 MB ≈ <strong>11,719 partitions</strong>.</li>
+<li>Max parallelism = 25 executors × 6 cores = <strong>150 concurrent tasks</strong>.</li>
+<li>Waves = ceil(11,719 / 150) ≈ <strong>79 waves</strong>.</li>
+<li>79 waves × 55 sec ≈ <strong>4,345 seconds (~72 minutes, roughly 1.2 hours)</strong>.</li>
+</ol>
+<h4 id="exercise-19-1">
+  Exercise 19
+  <a class="heading-link" href="#exercise-19-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ol>
+<li><strong>No</strong> — 1 GB average partition size is well above the recommended ~128–200 MB sweet spot; large partitions increase per-task memory pressure, spill risk, and reduce effective parallelism relative to available cores.</li>
+<li>Total data = 600 partitions × 1 GB = 600 GB. Target 128–200 MB per partition → 600,000 MB / 150 MB ≈ <strong>~4,000 partitions</strong> (any value in the ~3,000–4,700 range depending on your exact target is reasonable to state).</li>
+<li>Smaller, well-sized partitions give better parallelism (more tasks to spread across available cores), lower per-task memory footprint (less spill risk), and cheaper task retries on failure — but not so small that scheduling overhead dominates actual compute time (the small-file/small-partition problem from Exercise 15). The 100–200 MB range is the conventional sweet spot.</li>
+</ol>
+<h4 id="exercise-20-1">
+  Exercise 20
+  <a class="heading-link" href="#exercise-20-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ol>
+<li><strong>No</strong> — 150 MB exceeds the default 10 MB <code>autoBroadcastJoinThreshold</code>.</li>
+<li><strong>Yes, generally</strong> — 150 MB is still small relative to typical executor memory (fits easily on modern executors), and broadcasting avoids shuffling the 8 TB fact table entirely, which is a huge win. Worth forcing with a <code>broadcast()</code> hint (after confirming executor memory headroom).</li>
+<li><strong>Without broadcasting</strong>: a sort-merge join would shuffle both sides — roughly 8 TB + 150 MB ≈ <strong>8.15 TB</strong> moved across the network. <strong>With broadcasting</strong>: the fact table is read locally with no shuffle at all; only the dimension table moves, sent once to each executor — e.g., with 100 executors, that&rsquo;s roughly 150 MB × 100 = <strong>~15 GB</strong> total network traffic. This is a difference of roughly three orders of magnitude.</li>
+<li><strong>Broadcast join scales far better</strong> here — its cost scales with cluster size (number of executors receiving a copy), not with fact-table size, whereas a sort-merge join&rsquo;s cost scales directly with total data volume (8 TB+) regardless of cluster size.</li>
+</ol>
+<hr>
+<h3 id="bonus-real-interview-challenge--solution">
+  Bonus: Real Interview Challenge — Solution
+  <a class="heading-link" href="#bonus-real-interview-challenge--solution">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol>
+<li><strong>Executors per node</strong> = 32 cores / 8 cores = 4 (memory check: 4 × 24 GB = 96 GB ≤ 128 GB, leaving 32 GB headroom for the OS — fits comfortably). <strong>Total executors = 12 × 4 = 48.</strong></li>
+<li><strong>Max task parallelism</strong> = 48 executors × 8 cores = <strong>384 concurrent tasks</strong>.</li>
+<li><strong>Input partitions</strong> = 9.6 TB / 256 MB = 9,600,000 MB / 256 MB ≈ <strong>37,500 partitions</strong>.</li>
+<li><strong>Waves of map tasks</strong> = ceil(37,500 / 384) ≈ <strong>98 waves</strong>.</li>
+<li><strong>Reduce tasks after shuffle</strong> = <code>spark.sql.shuffle.partitions</code> = <strong>200</strong>.</li>
+<li><strong>Output file size</strong>: if the shuffle output volume is roughly comparable to the input (a conservative worst case, since <code>groupBy(user_id)</code> may or may not shrink the data much depending on aggregation type), 9.6 TB / 200 partitions ≈ <strong>48 GB per output file</strong> — extremely large, and a major red flag.</li>
+<li><strong>Anticipated issues</strong>: (a) <code>spark.sql.shuffle.partitions = 200</code> is drastically under-provisioned for 9.6 TB of data — target should be closer to <code>9.6 TB / 200 MB ≈ 48,000</code> partitions, not 200; (b) ~48 GB output files will be painfully slow to write, hard for a single task/executor to hold in memory, and will hurt downstream read parallelism; (c) with only 200 reduce tasks against 384 available slots, most of the cluster&rsquo;s parallelism goes unused in the shuffle stage; (d) latent risk of key skew (see Q9).</li>
+<li><strong>Tuning</strong>: dramatically increase <code>spark.sql.shuffle.partitions</code> (e.g., ~40,000–50,000 to target ~200 MB/partition), or better, enable <strong>AQE</strong> (<code>spark.sql.adaptive.enabled=true</code> with <code>spark.sql.adaptive.coalescePartitions.enabled=true</code>) to let Spark size shuffle partitions dynamically instead of hardcoding a number; enable <code>spark.sql.adaptive.skewJoin.enabled=true</code> proactively; reconsider the output write step to target a healthy per-file size (e.g., via <code>repartition</code> before write, or <code>maxRecordsPerFile</code>).</li>
+<li><strong>If one <code>user_id</code> = 40% of rows</strong>: severe data skew. That single key&rsquo;s reduce task would need to process roughly 40% of 9.6 TB ≈ <strong>3.84 TB</strong> in one task — an enormous straggler that will dominate the job&rsquo;s wall-clock time (the stage can&rsquo;t complete until this one task finishes), and is very likely to spill heavily to disk or OOM outright.</li>
+<li><strong>Detection &amp; mitigation</strong>: Detect via the Spark UI — one task in the shuffle stage will show a shuffle-read size and duration far exceeding the others (or check <code>df.groupBy(&quot;user_id&quot;).count()</code> distribution ahead of time to spot the hot key). Mitigate with <strong>AQE skew join handling</strong>, <strong>manual salting</strong> of the hot key (split into N salted sub-keys, aggregate, then combine), or isolating and processing that specific key separately from the rest of the dataset before unioning results back together.</li>
+</ol>
+<hr>
+<p>I suggest you print out these two exercise lists and do them with a pencil.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2025 -
+    
+    2026
+     Carlos Zansavio 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MFNJ21GZRL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MFNJ21GZRL');
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

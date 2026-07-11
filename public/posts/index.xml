@@ -10,9 +10,23 @@
 		
 		
 		
-			<lastBuildDate>Sun, 05 Jul 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Sat, 11 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="http://carlos.sjdr.cloud/posts/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Apache Spark exercises to test and improve your knowledge</title>
+				<link>http://carlos.sjdr.cloud/posts/apache-spark-exercises/</link>
+				<pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://carlos.sjdr.cloud/posts/apache-spark-exercises/</guid>
+				<description>&lt;p&gt;You&amp;rsquo;ve read the docs. You can write queries using SparkSQL or PySpark. You&amp;rsquo;re pretty sure you understand how Spark works under the hood.&lt;/p&gt;&#xA;&lt;p&gt;Then an interviewer asks you to actually reason through a shuffle, and that confidence gets shaky fast.&lt;/p&gt;&#xA;&lt;p&gt;Been there.&lt;/p&gt;&#xA;&lt;p&gt;What actually got these concepts to stick for me was working through math problems tied to Spark&amp;rsquo;s internals. You have to understand the mechanics or the numbers don&amp;rsquo;t add up.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Building a data platform in my homelab - Part 1</title>
+				<link>http://carlos.sjdr.cloud/posts/building-a-data-platform-in-my-homelab/</link>
+				<pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://carlos.sjdr.cloud/posts/building-a-data-platform-in-my-homelab/</guid>
+				<description>&lt;p&gt;Some of you might know that I have some services running indentifly, using a homelab that I&amp;rsquo;ve been building for more than two years now.&#xA;These services help me store personal files but I also provide services to local community.&lt;/p&gt;&#xA;&lt;p&gt;I do data engineering for a living (you also must know that), but I don&amp;rsquo;t have my own data platform. I started feeling that it must be the momento to do that. I have all the infraestructure and knoledge to do that.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Building a CDC Streaming Pipeline locally</title>
 				<link>http://carlos.sjdr.cloud/posts/creating-a-simple-cdc-streaming-pipeline/</link>

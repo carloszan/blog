@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Exercise on carlos zansavio</title>
+		<link>http://carlos.sjdr.cloud/tags/exercise/</link>
+		<description>Recent content in Exercise on carlos zansavio</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 11 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://carlos.sjdr.cloud/tags/exercise/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Apache Spark exercises to test and improve your knowledge</title>
+				<link>http://carlos.sjdr.cloud/posts/apache-spark-exercises/</link>
+				<pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://carlos.sjdr.cloud/posts/apache-spark-exercises/</guid>
+				<description>&lt;p&gt;You&amp;rsquo;ve read the docs. You can write queries using SparkSQL or PySpark. You&amp;rsquo;re pretty sure you understand how Spark works under the hood.&lt;/p&gt;&#xA;&lt;p&gt;Then an interviewer asks you to actually reason through a shuffle, and that confidence gets shaky fast.&lt;/p&gt;&#xA;&lt;p&gt;Been there.&lt;/p&gt;&#xA;&lt;p&gt;What actually got these concepts to stick for me was working through math problems tied to Spark&amp;rsquo;s internals. You have to understand the mechanics or the numbers don&amp;rsquo;t add up.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
