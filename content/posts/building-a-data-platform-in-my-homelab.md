@@ -9,6 +9,7 @@ tags = [
 categories = [
 	"data",
 ]
+draft = true
 +++
 
 Some of you might know that I have some services running indentifly, using a homelab that I've been building for more than two years now.
