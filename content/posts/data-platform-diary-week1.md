@@ -25,7 +25,7 @@ The plan today was just to design something. Not every detail needs to be nailed
 
 I already run Kubernetes across a few nodes on top of my VM servers, so that's an easy call: Kubernetes will be the cluster manager.
 
-![Data Platform](my-data-platform.png)
+![Data Platform](../my-data-platform.png)
 
 Nothing fancy here, and honestly, I don't want fancy. This is meant to be a simple, open-source platform for simple problems.
 
