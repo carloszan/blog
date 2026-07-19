@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Sat, 11 Jul 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Sat, 18 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="http://carlos.sjdr.cloud/posts/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>My data platform diary - Week 1</title>
+				<link>http://carlos.sjdr.cloud/posts/data-platform-diary-week1/</link>
+				<pubDate>Sat, 18 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://carlos.sjdr.cloud/posts/data-platform-diary-week1/</guid>
+				<description>&lt;p&gt;Some of you already know I run a bunch of self-hosted services out of a homelab I&amp;rsquo;ve been building for over two years now. It started as a place to store personal files, but it&amp;rsquo;s grown into something a few people in my local community actually rely on.&lt;/p&gt;&#xA;&lt;p&gt;I work in data engineering for a living, but I&amp;rsquo;ve never had my own data platform. At some point that stopped making sense to me — I have the infrastructure, I have the knowledge, so why not build one?&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Apache Spark exercises to test and improve your knowledge</title>
 				<link>http://carlos.sjdr.cloud/posts/apache-spark-exercises/</link>

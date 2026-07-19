@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  My data platform diary - Week 1 · carlos zansavio
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Carlos Zansavio">
+<meta name="description" content="Let&#39;s build a data platform together">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="My data platform diary - Week 1">
+	<meta name="twitter:description" content="Let&#39;s build a data platform together">
+
+<meta property="og:url" content="http://carlos.sjdr.cloud/posts/data-platform-diary-week1/">
+	<meta property="og:site_name" content="carlos zansavio">
+	<meta property="og:title" content="My data platform diary - Week 1">
+	<meta property="og:description" content="Let&#39;s build a data platform together">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-07-18T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-07-18T00:00:00+00:00">
+		<meta property="article:tag" content="Data-Engineering">
+		<meta property="article:tag" content="My-Data-Platform">
+
+
+
+
+<link rel="canonical" href="http://carlos.sjdr.cloud/posts/data-platform-diary-week1/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.f03d6359cf766772af14fbe07ce6aca734b321c2e15acba0bbf4e2254941c460.css" integrity="sha256-8D1jWc92Z3KvFPvgfOaspzSzIcLhWsugu/TiJUlBxGA=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.ad48f476275974885bdc03d5251e3cdbe1678c54a63ff772376b0ed2adc468dd.css" integrity="sha256-rUj0didZdIhb3APVJR482&#43;FnjFSmP/dyN2sO0q3EaN0=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://carlos.sjdr.cloud/">
+      carlos zansavio
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://carlos.sjdr.cloud/posts/data-platform-diary-week1/">
+              My data platform diary - Week 1
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2026-07-18T00:00:00Z">
+                July 18, 2026
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              4-minute read
+            </span>
+          </div>
+          <div class="authors">
+  <i class="fa-solid fa-user" aria-hidden="true"></i>
+    <a href="/authors/carlos-zansavio/">Carlos Zansavio</a></div>
+
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/categories/data/">Data</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/data-engineering/">Data-Engineering</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/my-data-platform/">My-Data-Platform</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>Some of you already know I run a bunch of self-hosted services out of a homelab I&rsquo;ve been building for over two years now. It started as a place to store personal files, but it&rsquo;s grown into something a few people in my local community actually rely on.</p>
+<p>I work in data engineering for a living, but I&rsquo;ve never had my own data platform. At some point that stopped making sense to me — I have the infrastructure, I have the knowledge, so why not build one?</p>
+<p>So this is the first post in a new series about building a data platform, from scratch, on my own hardware.</p>
+<h2 id="day-1--sketching-the-scaffold">
+  Day 1 — Sketching the scaffold
+  <a class="heading-link" href="#day-1--sketching-the-scaffold">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The plan today was just to design something. Not every detail needs to be nailed down yet, but I need enough of a scaffold to turn into a real work plan.</p>
+<p>I already run Kubernetes across a few nodes on top of my VM servers, so that&rsquo;s an easy call: Kubernetes will be the cluster manager.</p>
+<p><img src="my-data-platform.png" alt="Data Platform"></p>
+<p>Nothing fancy here, and honestly, I don&rsquo;t want fancy. This is meant to be a simple, open-source platform for simple problems.</p>
+<p>The trigger for all of this was actually one specific problem: I want to analyze logs from my Nginx servers. On its own, that wouldn&rsquo;t justify building an entire platform — but I know more problems like this are coming, and I&rsquo;d rather solve them once, properly, than patch together one-off scripts every time.</p>
+<p>Here&rsquo;s where I landed on scope for now:</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> MinIO</li>
+<li><input checked="" disabled="" type="checkbox"> Kafka</li>
+<li><input checked="" disabled="" type="checkbox"> Stream Nginx logs into a Kafka topic</li>
+<li><input disabled="" type="checkbox"> Read the streaming data locally and process it</li>
+<li><input disabled="" type="checkbox"> Plan the deploy</li>
+</ul>
+<p>Later:</p>
+<ul>
+<li><input disabled="" type="checkbox"> Catalog</li>
+<li><input disabled="" type="checkbox"> Trino</li>
+<li><input disabled="" type="checkbox"> Metabase</li>
+</ul>
+<p>One thing worth saying up front: this isn&rsquo;t fault-tolerant infrastructure. It&rsquo;s a lean setup, built to solve real (if small) problems and to learn along the way.</p>
+<h2 id="day-2--object-storage">
+  Day 2 — Object storage
+  <a class="heading-link" href="#day-2--object-storage">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>First decision: where does the data live? MinIO was the obvious choice — it&rsquo;s well established at this point and there&rsquo;s no shortage of ways to run it.</p>
+<p>I spun up a 2GB RAM VM and installed it with Podman, backed by SSD storage rather than NVMe (no need to burn the fast disks on this). Once it was up, I created a <code>lakehouse/</code> bucket and pushed a mock file to it just to confirm everything was wired correctly. It was.</p>
+<h2 id="day-3--the-broker">
+  Day 3 — The broker
+  <a class="heading-link" href="#day-3--the-broker">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Today was about the message broker. I went with Kafka in KRaft mode — no ZooKeeper to babysit — deployed with Podman on another 2GB RAM VM.</p>
+<p>This one was refreshingly painless. I tested it with the Kafka CLI tools under <code>/opt/kafka/bin/</code> and everything checked out. (We&rsquo;ll see if that holds up.)</p>
+<h2 id="day-4--where-it-got-interesting">
+  Day 4 — Where it got interesting
+  <a class="heading-link" href="#day-4--where-it-got-interesting">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Time to actually get Nginx logs flowing into Kafka. I picked Fluent Bit for this — it&rsquo;s lightweight and a common choice for containerized setups, so it felt like the right tool for the job.</p>
+<p>I put together the Fluent Bit compose file without much trouble. But when I got to editing the Nginx config, I stopped myself — I have daily users on these services, and touching that config without a proper backup felt reckless. So I closed the laptop and picked it back up the next day.</p>
+<h2 id="day-5--logs-finally">
+  Day 5 — Logs, finally
+  <a class="heading-link" href="#day-5--logs-finally">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Here&rsquo;s the wrinkle I ran into: I&rsquo;m not running vanilla Nginx, I&rsquo;m running Nginx Proxy Manager in front of everything. That changes where the config needs to go.</p>
+<p>After backing everything up, I added this to <code>/data/nginx/custom/http_top.conf</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="k">log_format</span> <span class="s">json_combined</span> <span class="s">escape=json</span>
+</span></span><span class="line"><span class="cl">  <span class="s">&#39;</span><span class="p">{</span><span class="kn">&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;&#34;time&#34;:&#34;</span><span class="nv">$time_iso8601&#34;,&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;&#34;remote_addr&#34;:&#34;</span><span class="nv">$remote_addr&#34;,&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;&#34;request_method&#34;:&#34;</span><span class="nv">$request_method&#34;,&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;&#34;request_uri&#34;:&#34;</span><span class="nv">$request_uri&#34;,&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;&#34;status&#34;:</span><span class="nv">$status,&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;&#34;body_bytes_sent&#34;:</span><span class="nv">$body_bytes_sent,&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;&#34;request_time&#34;:</span><span class="nv">$request_time,&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;&#34;upstream_response_time&#34;:&#34;</span><span class="nv">$upstream_response_time&#34;,&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;&#34;http_referer&#34;:&#34;</span><span class="nv">$http_referer&#34;,&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;&#34;http_user_agent&#34;:&#34;</span><span class="nv">$http_user_agent&#34;,&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;&#34;host&#34;:&#34;</span><span class="nv">$host&#34;&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="s">&#39;</span><span class="err">}</span><span class="s">&#39;</span><span class="p">;</span>
+</span></span></code></pre></div><p>And this to <code>/data/nginx/custom/server_proxy.conf</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="k">access_log</span> <span class="s">/data/logs/json-access.log</span> <span class="s">json_combined</span><span class="p">;</span>
+</span></span></code></pre></div><p>That&rsquo;s it — every proxy host now logs to a single JSON file, in a consistent format, with zero per-host edits in the Advanced tab. Restarted the server and it just worked.</p>
+<p>From there, it was a matter of getting Fluent Bit to pick up that log file and push it into Kafka. Took a bit of trial and error, but I got there. Here&rsquo;s the topic receiving real traffic:</p>
+<pre tabindex="0"><code>root@debian:~# podman exec -it kafka /opt/kafka/bin/kafka-console-consumer.sh --topic nginx-access-logs --bootstrap-server localhost:9092
+
+{&#34;time&#34;:1784146120.0,&#34;remote_addr&#34;:&#34;172.71.195.41&#34;,&#34;request_method&#34;:&#34;GET&#34;,&#34;request_uri&#34;:&#34;/robots.txt&#34;,&#34;status&#34;:200,&#34;body_bytes_sent&#34;:2105,&#34;request_time&#34;:0.001,&#34;upstream_response_time&#34;:&#34;0.001&#34;,&#34;http_referer&#34;:&#34;&#34;,&#34;http_user_agent&#34;:&#34;Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36&#34;,&#34;host&#34;:&#34;carlos.sjdr.cloud&#34;}
+</code></pre><p>Real logs, flowing in real time. That&rsquo;s a solid place to close out the week.</p>
+<h2 id="up-next">
+  Up next
+  <a class="heading-link" href="#up-next">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Next week I&rsquo;m getting into the code side: PySpark for processing, Kubernetes manifests for the deploy, and whatever else comes up along the way. Stay tuned.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2025 -
+    
+    2026
+     Carlos Zansavio 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MFNJ21GZRL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MFNJ21GZRL');
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>
