@@ -55,7 +55,7 @@ sized everything small.
 
 ## The big picture
 
-![Data flow: a shipper sends proxy logs to Kafka; the bronze job reads Kafka and writes bronze, the silver and gold jobs each read the layer below and write the next, bad rows go to quarantine; data-api reads gold and Grafana asks data-api](data-path.png)
+![Data flow: a shipper sends proxy logs to Kafka; the bronze job reads Kafka and writes bronze, the silver and gold jobs each read the layer below and write the next, bad rows go to quarantine; data-api reads gold and Grafana asks data-api](../data-path.png)
 
 Data flows in one direction:
 
@@ -109,7 +109,7 @@ the job name, its version, and which Python module to run. At start-up, the
 launcher downloads the job's wheel (and the shared SDK wheel) from an
 `artifacts` bucket in MinIO and runs it.
 
-![Deploy flow: build and upload the wheel, push a version bump; ArgoCD applies it, spark-operator starts a driver that downloads the wheel and pulls the one generic image](deploy-flow.png)
+![Deploy flow: build and upload the wheel, push a version bump; ArgoCD applies it, spark-operator starts a driver that downloads the wheel and pulls the one generic image](../deploy-flow.png)
 
 A release is: build the wheel, upload it, change `APP_VERSION` in the
 manifest, push. ArgoCD applies it, and the next scheduled run uses the new
@@ -315,7 +315,7 @@ Alertmanager already ran on another machine, so inside the cluster I added a
 lightweight **Prometheus agent** that scrapes cluster targets and forwards
 everything to that Prometheus.
 
-![Monitoring: kube-state-metrics watches the Spark jobs, data-api reads the Delta tables; a Prometheus agent scrapes both and forwards to Prometheus on another machine, which alerts to Telegram through Alertmanager](monitoring.png)
+![Monitoring: kube-state-metrics watches the Spark jobs, data-api reads the Delta tables; a Prometheus agent scrapes both and forwards to Prometheus on another machine, which alerts to Telegram through Alertmanager](../monitoring.png)
 
 The interesting part is what I didn't do: **the Spark jobs export no metrics.**
 The standard approach would be for every job to push metrics to a Pushgateway.

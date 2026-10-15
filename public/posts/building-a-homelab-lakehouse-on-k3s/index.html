@@ -288,7 +288,7 @@ sized everything small.</p>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
-<p><img alt="Data flow: a shipper sends proxy logs to Kafka; the bronze job reads Kafka and writes bronze, the silver and gold jobs each read the layer below and write the next, bad rows go to quarantine; data-api reads gold and Grafana asks data-api" src="data-path.png"></p>
+<p><img alt="Data flow: a shipper sends proxy logs to Kafka; the bronze job reads Kafka and writes bronze, the silver and gold jobs each read the layer below and write the next, bad rows go to quarantine; data-api reads gold and Grafana asks data-api" src="../data-path.png"></p>
 <p>Data flows in one direction:</p>
 <ol>
 <li>The proxy writes one JSON line per request. A log shipper sends it to a
@@ -344,7 +344,7 @@ manifest points to that same launcher and sets a few environment variables:
 the job name, its version, and which Python module to run. At start-up, the
 launcher downloads the job&rsquo;s wheel (and the shared SDK wheel) from an
 <code>artifacts</code> bucket in MinIO and runs it.</p>
-<p><img alt="Deploy flow: build and upload the wheel, push a version bump; ArgoCD applies it, spark-operator starts a driver that downloads the wheel and pulls the one generic image" src="deploy-flow.png"></p>
+<p><img alt="Deploy flow: build and upload the wheel, push a version bump; ArgoCD applies it, spark-operator starts a driver that downloads the wheel and pulls the one generic image" src="../deploy-flow.png"></p>
 <p>A release is: build the wheel, upload it, change <code>APP_VERSION</code> in the
 manifest, push. ArgoCD applies it, and the next scheduled run uses the new
 code. The image changes only when Spark or Delta changes, a few times a year.</p>
@@ -606,7 +606,7 @@ lesson.</p>
 Alertmanager already ran on another machine, so inside the cluster I added a
 lightweight <strong>Prometheus agent</strong> that scrapes cluster targets and forwards
 everything to that Prometheus.</p>
-<p><img alt="Monitoring: kube-state-metrics watches the Spark jobs, data-api reads the Delta tables; a Prometheus agent scrapes both and forwards to Prometheus on another machine, which alerts to Telegram through Alertmanager" src="monitoring.png"></p>
+<p><img alt="Monitoring: kube-state-metrics watches the Spark jobs, data-api reads the Delta tables; a Prometheus agent scrapes both and forwards to Prometheus on another machine, which alerts to Telegram through Alertmanager" src="../monitoring.png"></p>
 <p>The interesting part is what I didn&rsquo;t do: <strong>the Spark jobs export no metrics.</strong>
 The standard approach would be for every job to push metrics to a Pushgateway.
 That means changing the shared library, republishing every job, running
