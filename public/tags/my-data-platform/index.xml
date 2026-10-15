@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>My-Data-Platform on carlos zansavio</title>
-		<link>http://carlos.sjdr.cloud/tags/my-data-platform/</link>
-		<description>Recent content in My-Data-Platform on carlos zansavio</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Sat, 18 Jul 2026 00:00:00 +0000</lastBuildDate>
-		
-			<atom:link href="http://carlos.sjdr.cloud/tags/my-data-platform/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>My data platform diary - Week 1</title>
-				<link>http://carlos.sjdr.cloud/posts/data-platform-diary-week1/</link>
-				<pubDate>Sat, 18 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://carlos.sjdr.cloud/posts/data-platform-diary-week1/</guid>
-				<description>&lt;p&gt;Some of you already know I run a bunch of self-hosted services out of a homelab I&amp;rsquo;ve been building for over two years now. It started as a place to store personal files, but it&amp;rsquo;s grown into something a few people in my local community actually rely on.&lt;/p&gt;&#xA;&lt;p&gt;I work in data engineering for a living, but I&amp;rsquo;ve never had my own data platform. At some point that stopped making sense to me — I have the infrastructure, I have the knowledge, so why not build one?&lt;/p&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>My-Data-Platform on carlos zansavio</title>
+    <link>http://carlos.sjdr.cloud/tags/my-data-platform/</link>
+    <description>Recent content in My-Data-Platform on carlos zansavio</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 18 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://carlos.sjdr.cloud/tags/my-data-platform/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My data platform diary - Week 1</title>
+      <link>http://carlos.sjdr.cloud/posts/data-platform-diary-week1/</link>
+      <pubDate>Sat, 18 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://carlos.sjdr.cloud/posts/data-platform-diary-week1/</guid>
+      <description>&lt;p&gt;Some of you already know I run a bunch of self-hosted services out of a homelab I&amp;rsquo;ve been building for over two years now. It started as a place to store personal files, but it&amp;rsquo;s grown into something a few people in my local community actually rely on.&lt;/p&gt;&#xA;&lt;p&gt;I work in data engineering for a living, but I&amp;rsquo;ve never had my own data platform. At some point that stopped making sense to me — I have the infrastructure, I have the knowledge, so why not build one?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My data platform diary - Week 2</title>
+      <link>http://carlos.sjdr.cloud/posts/data-platform-diary-week2/</link>
+      <pubDate>Sat, 18 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://carlos.sjdr.cloud/posts/data-platform-diary-week2/</guid>
+      <description>&lt;p&gt;Here&amp;rsquo;s where things stood at the end of last week:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; MinIO&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Kafka&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Stream Nginx logs into a Kafka topic&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Read the streaming data locally and process it&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Plan the deploy&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Later:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Catalog&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Trino&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Metabase&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;day-1--laying-out-the-repo&#34;&gt;&#xA;  Day 1 — Laying out the repo&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#day-1--laying-out-the-repo&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Time to actually start coding. Before writing a single job, I needed to figure out how the repository should be structured — something that could scale in more than one direction without becoming a mess. I also wanted a proper dev environment to test code in before it ever touches the cluster, so I&amp;rsquo;m setting up a devcontainer with a Spark instance for that.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

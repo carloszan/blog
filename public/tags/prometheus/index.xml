@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prometheus on carlos zansavio</title>
+    <link>http://carlos.sjdr.cloud/tags/prometheus/</link>
+    <description>Recent content in Prometheus on carlos zansavio</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 14 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://carlos.sjdr.cloud/tags/prometheus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Designing a data platform on a homelab k3s cluster</title>
+      <link>http://carlos.sjdr.cloud/posts/building-a-homelab-lakehouse-on-k3s/</link>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://carlos.sjdr.cloud/posts/building-a-homelab-lakehouse-on-k3s/</guid>
+      <description>&lt;h1 id=&#34;a-lakehouse-in-my-basement&#34;&gt;&#xA;  A lakehouse in my basement&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#a-lakehouse-in-my-basement&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;I run a few websites from a small Kubernetes cluster at home. All public&#xA;traffic goes through one reverse proxy, and its access log was already being&#xA;sent to Kafka. Then nothing happened to it. I wanted to answer simple&#xA;questions: how many people visit each site, which pages they read, how fast&#xA;the pages are, and who is scanning for &lt;code&gt;/wp-admin&lt;/code&gt; this week.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

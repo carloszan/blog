@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://carlos.sjdr.cloud/pt-br/</loc>
-    <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+    <lastmod>2025-09-08T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -13,6 +13,19 @@
                 rel="alternate"
                 hreflang="pt-br"
                 href="http://carlos.sjdr.cloud/pt-br/"
+                />
+  </url><url>
+    <loc>http://carlos.sjdr.cloud/pt-br/posts/</loc>
+    <lastmod>2025-09-08T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://carlos.sjdr.cloud/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://carlos.sjdr.cloud/pt-br/posts/"
                 />
   </url><url>
     <loc>http://carlos.sjdr.cloud/pt-br/about/</loc>
@@ -45,13 +58,13 @@
     <lastmod>2023-01-05T01:15:52+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/autores/autores-de-hugo/"
+                hreflang="en"
+                href="http://carlos.sjdr.cloud/authors/hugo-authors/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/authors/hugo-authors/"
+                hreflang="pt-br"
+                href="http://carlos.sjdr.cloud/pt-br/autores/autores-de-hugo/"
                 />
   </url><url>
     <loc>http://carlos.sjdr.cloud/pt-br/categories/</loc>
@@ -101,18 +114,6 @@
                 href="http://carlos.sjdr.cloud/pt-br/contact/"
                 />
   </url><url>
-    <loc>http://carlos.sjdr.cloud/pt-br/posts/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/posts/"
-                />
-  </url><url>
     <loc>http://carlos.sjdr.cloud/pt-br/projects/</loc>
     <xhtml:link
                 rel="alternate"
@@ -128,13 +129,13 @@
     <loc>http://carlos.sjdr.cloud/pt-br/series/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="pt-br"
-                href="http://carlos.sjdr.cloud/pt-br/series/"
+                hreflang="en"
+                href="http://carlos.sjdr.cloud/series/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://carlos.sjdr.cloud/series/"
+                hreflang="pt-br"
+                href="http://carlos.sjdr.cloud/pt-br/series/"
                 />
   </url>
 </urlset>

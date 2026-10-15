@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Designing a data platform on a homelab k3s cluster · carlos zansavio
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Carlos Zansavio">
+<meta name="description" content="A lakehouse in my basement: designing a data platform on a homelab k3s cluster">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Designing a data platform on a homelab k3s cluster">
+  <meta name="twitter:description" content="A lakehouse in my basement: designing a data platform on a homelab k3s cluster">
+
+<meta property="og:url" content="http://carlos.sjdr.cloud/posts/building-a-homelab-lakehouse-on-k3s/">
+  <meta property="og:site_name" content="carlos zansavio">
+  <meta property="og:title" content="Designing a data platform on a homelab k3s cluster">
+  <meta property="og:description" content="A lakehouse in my basement: designing a data platform on a homelab k3s cluster">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-10-14T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-10-14T00:00:00+00:00">
+    <meta property="article:tag" content="Kubernetes">
+    <meta property="article:tag" content="K3s">
+    <meta property="article:tag" content="Spark">
+    <meta property="article:tag" content="Delta-Lake">
+    <meta property="article:tag" content="Kafka">
+    <meta property="article:tag" content="Minio">
+
+
+
+
+<link rel="canonical" href="http://carlos.sjdr.cloud/posts/building-a-homelab-lakehouse-on-k3s/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.c8e4eea149ae1dc7c61ba9b0781793711a4e657f7e07a4413f9abc46d52dffc4.css" integrity="sha256-yOTuoUmuHcfGG6mweBeTcRpOZX9&#43;B6RBP5q8RtUt/8Q=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://carlos.sjdr.cloud/">
+      carlos zansavio
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://carlos.sjdr.cloud/posts/building-a-homelab-lakehouse-on-k3s/">
+              Designing a data platform on a homelab k3s cluster
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2026-10-14T00:00:00Z">
+                October 14, 2026
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              15-minute read
+            </span>
+          </div>
+          <div class="authors">
+  <i class="fa-solid fa-user" aria-hidden="true"></i>
+    <a href="/authors/carlos-zansavio/">Carlos Zansavio</a></div>
+
+          
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/kubernetes/">Kubernetes</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/k3s/">K3s</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/spark/">Spark</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/delta-lake/">Delta-Lake</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/kafka/">Kafka</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/minio/">Minio</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/argocd/">Argocd</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/gitops/">Gitops</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/duckdb/">Duckdb</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/prometheus/">Prometheus</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/system-design/">System-Design</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h1 id="a-lakehouse-in-my-basement">
+  A lakehouse in my basement
+  <a class="heading-link" href="#a-lakehouse-in-my-basement">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>I run a few websites from a small Kubernetes cluster at home. All public
+traffic goes through one reverse proxy, and its access log was already being
+sent to Kafka. Then nothing happened to it. I wanted to answer simple
+questions: how many people visit each site, which pages they read, how fast
+the pages are, and who is scanning for <code>/wp-admin</code> this week.</p>
+<p>An analytics SaaS would have answered most of that in an afternoon. I built a
+small lakehouse instead, partly because I wanted to own the data and partly
+because I wanted to see how far I could take a &ldquo;real&rdquo; data platform design on
+hardware that fits under a desk.</p>
+<p>This post is about the design: what the parts are, why I chose them, and what
+each choice costs.</p>
+<h2 id="start-with-the-constraints">
+  Start with the constraints
+  <a class="heading-link" href="#start-with-the-constraints">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Most decisions below make sense only with the constraints in mind:</p>
+<ul>
+<li><strong>Small, fixed hardware.</strong> A bare-metal k3s cluster with two amd64 nodes and
+one arm64 node. No autoscaler. After the existing workloads, the data
+platform has about <strong>one free amd64 CPU</strong>.</li>
+<li><strong>Things that already exist.</strong> Kafka, an S3-compatible object store (MinIO
+on its own VM), ArgoCD and cert-manager were already there. The platform
+should use them, not provision its own.</li>
+<li><strong>Low traffic.</strong> A few thousand requests per day. Sometimes nothing arrives
+for hours.</li>
+<li><strong>One person operating it.</strong> Whatever I build, I have to be able to fix it
+at 11 p.m. without remembering how it works.</li>
+</ul>
+<p>Low traffic and one free CPU look like reasons to skip Spark entirely, and I
+will come back to that. But the goal was a platform that could take more data sources without being redesigned, so I designed for that and
+sized everything small.</p>
+<h2 id="the-big-picture">
+  The big picture
+  <a class="heading-link" href="#the-big-picture">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><img alt="Data flow: a shipper sends proxy logs to Kafka; the bronze job reads Kafka and writes bronze, the silver and gold jobs each read the layer below and write the next, bad rows go to quarantine; data-api reads gold and Grafana asks data-api" src="data-path.png"></p>
+<p>Data flows in one direction:</p>
+<ol>
+<li>The proxy writes one JSON line per request. A log shipper sends it to a
+Kafka topic.</li>
+<li>A <strong>streaming Spark job</strong> reads Kafka and writes the <strong>bronze</strong> Delta table
+on MinIO. It is the only job that runs all the time.</li>
+<li>An <strong>hourly Spark job</strong> turns new bronze rows into <strong>silver</strong>: one clean,
+typed row per request.</li>
+<li>Another <strong>hourly Spark job</strong> builds <strong>gold</strong>: eleven small aggregated
+tables, made for dashboards.</li>
+<li>A small <strong>query API</strong> reads gold and serves it to <strong>Grafana</strong>.</li>
+<li>A nightly job keeps the Delta tables compact.</li>
+</ol>
+<p>The jobs never talk to each other. Each one reads the layer below from object
+storage and writes the next layer. If silver is broken for a day, bronze keeps
+collecting data, and silver catches up when it is fixed.</p>
+<p>Underneath, everything is deployed with GitOps: ArgoCD watches the Git repo,
+and the Kubeflow <strong>spark-operator</strong> turns Spark job definitions into driver
+and executor pods.</p>
+<h2 id="decision-1-spark-for-both-streaming-and-batch">
+  Decision 1: Spark for both streaming and batch
+  <a class="heading-link" href="#decision-1-spark-for-both-streaming-and-batch">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The obvious question: why Spark for a few thousand rows a day? DuckDB or a
+Python script with a cron job would be faster and far lighter.</p>
+<p>I chose Spark Structured Streaming plus Delta Lake because one engine covers
+everything: the always-on Kafka consumer, the hourly batch jobs, and table
+maintenance. They share one runtime image, one library, and one way to deploy.
+I also looked at Flink for the streaming part. It is a better streaming
+engine, but it would mean running and learning a second engine next to Spark
+for the batch layers. Kafka in front acts as a buffer, so the streaming job
+can be slow or down for a while without losing anything.</p>
+<p><strong>The cost</strong> is real. A Spark driver plus one executor needs about a gigabyte
+of memory each, and a pod takes time to start. With one free CPU, every job
+asks for a small fraction of a core (200–400 millicores), and the streaming job
+runs with a single executor. <em>Spark here is oversized for today&rsquo;s data but
+sized for the platform I want</em>.</p>
+<h2 id="decision-2-one-generic-image-business-logic-as-python-wheels">
+  Decision 2: one generic image, business logic as Python wheels
+  <a class="heading-link" href="#decision-2-one-generic-image-business-logic-as-python-wheels">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>In many Spark-on-Kubernetes setups, each job is a Docker image. Change one
+line, build an image, push it, update the manifest. I didn&rsquo;t want that loop.</p>
+<p>Instead there is <strong>one generic Spark image</strong> with Spark, Delta, the Kafka
+connector and the S3 libraries, and a small launcher script. Every job&rsquo;s
+manifest points to that same launcher and sets a few environment variables:
+the job name, its version, and which Python module to run. At start-up, the
+launcher downloads the job&rsquo;s wheel (and the shared SDK wheel) from an
+<code>artifacts</code> bucket in MinIO and runs it.</p>
+<p><img alt="Deploy flow: build and upload the wheel, push a version bump; ArgoCD applies it, spark-operator starts a driver that downloads the wheel and pulls the one generic image" src="deploy-flow.png"></p>
+<p>A release is: build the wheel, upload it, change <code>APP_VERSION</code> in the
+manifest, push. ArgoCD applies it, and the next scheduled run uses the new
+code. The image changes only when Spark or Delta changes, a few times a year.</p>
+<p><strong>What this costs:</strong></p>
+<ul>
+<li><strong>Versions must never be overwritten.</strong> If two different wheels share a
+version, the cluster runs whichever is in storage, and nothing tells you.
+Every change gets a new version, and old versions stay for rollback.</li>
+<li><strong>Naming is rigid.</strong> The launcher builds the wheel&rsquo;s path from the job name,
+so the job name, the Python package name and the storage folder must match
+exactly.</li>
+<li><strong>No Python UDFs.</strong> Spark only sends <code>.zip</code>/<code>.egg</code> files to executor Python
+processes, not <code>.whl</code>. Instead of working around it, I made a rule: all
+transformations are native Spark expressions. A test fails if anyone adds a
+UDF. This turned out to be a good rule anyway: no Python serialization
+overhead, and executors never need our code.</li>
+<li><strong>Wheel publishing is still manual.</strong> The image has CI. The wheels don&rsquo;t
+yet. It&rsquo;s the main thing I&rsquo;d fix next.</li>
+</ul>
+<h2 id="decision-3-a-monorepo-split-by-responsibility">
+  Decision 3: a monorepo split by responsibility
+  <a class="heading-link" href="#decision-3-a-monorepo-split-by-responsibility">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The repo has five top-level parts that could have been five repos:</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Part</th>
+          <th style="text-align: left">What it owns</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>infra/</code></td>
+          <td style="text-align: left">The platform: spark-operator, namespaces, quotas, network policies, ArgoCD apps</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>spark-image/</code></td>
+          <td style="text-align: left">The generic runtime image</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>spark-sdk/</code></td>
+          <td style="text-align: left">The shared library: contracts, data quality, read/write helpers, pipeline base classes</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>spark-jobs-src/</code></td>
+          <td style="text-align: left">The business logic, one Python package per job</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>spark-manifests/</code></td>
+          <td style="text-align: left">The job definitions that ArgoCD applies</td>
+      </tr>
+  </tbody>
+</table>
+<p>Each part changes at a different speed. The platform and the image change
+rarely. The SDK changes when I add a capability. Jobs and manifests change
+often. Keeping them separate makes it clear what a change touches. One repo
+means one place to search and one pull request for a change that crosses parts.</p>
+<h2 id="decision-4-organise-everything-by-system-first">
+  Decision 4: organise everything by system first
+  <a class="heading-link" href="#decision-4-organise-everything-by-system-first">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>At first, tables lived under <code>bronze/nginx_logs</code>, <code>silver/...</code> — layer first.
+I flipped it to <strong>system first</strong>: <code>nginx-logs/bronze</code>, <code>nginx-logs/silver</code>,
+<code>nginx-logs/gold/&lt;table&gt;</code>. Code, manifests and checkpoints follow the same
+shape.</p>
+<p>The reason is ownership. A pipeline is one system going through its layers. If
+I want to delete, back up, grant access to, or understand the &ldquo;nginx logs&rdquo;
+pipeline, it&rsquo;s one prefix. With layer-first, it would be spread across three.
+The cost was a careful migration of a live streaming table, but doing it early
+was cheap.</p>
+<h2 id="decision-5-fix-data-at-the-source-not-in-spark">
+  Decision 5: fix data at the source, not in Spark
+  <a class="heading-link" href="#decision-5-fix-data-at-the-source-not-in-spark">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The original proxy log was missing things I needed: timestamps only had
+one-second resolution, there was no request ID, and nothing said whether a
+request came through Cloudflare. No amount of Spark can recover data that was
+never logged.</p>
+<p>So I changed the log format on the proxy itself: millisecond timestamps, a
+request ID, upstream timings, browser fetch headers, and Cloudflare fields.
+The real visitor IP comes from Cloudflare&rsquo;s header <strong>only when the connection
+really comes from a Cloudflare edge</strong>; otherwise anyone could fake it. The
+format has a version field, so old and new lines can be told apart.</p>
+<p>The lesson I keep relearning: the cheapest data quality fix is upstream.</p>
+<h2 id="decision-6-data-contracts-enforced-by-the-shared-library">
+  Decision 6: data contracts, enforced by the shared library
+  <a class="heading-link" href="#decision-6-data-contracts-enforced-by-the-shared-library">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>This is the decision I&rsquo;m happiest with.</p>
+<p>Every table has a <strong>contract</strong>: a YAML file that declares its columns, types,
+partitioning, how it&rsquo;s written, and quality checks. Here is a trimmed one for
+a gold table:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">layer</span><span class="p">:</span><span class="w"> </span><span class="l">gold</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">table</span><span class="p">:</span><span class="w"> </span><span class="l">traffic_hourly</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">insert_mode</span><span class="p">:</span><span class="w"> </span>{<span class="nt">type: replace_where, column: date, lookback_days</span><span class="p">:</span><span class="w"> </span><span class="m">2</span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">partitioning</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">date]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">data</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">primary_key</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">date, hour, app]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">schema</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- {<span class="nt">name: date, type: date, required</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- {<span class="nt">name: hour, type: integer, required</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- {<span class="nt">name: app,  type: string,  required</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- {<span class="nt">name: requests, type: long-integer, required</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">quality</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- {<span class="nt">check: accepted_values, column: app, values</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">arede, jellyfin, other]}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- {<span class="nt">check: range, column: hour, min: 0, max</span><span class="p">:</span><span class="w"> </span><span class="m">23</span>}<span class="w">
+</span></span></span></code></pre></div><p>The shared SDK does the rest. Every pipeline runs the same steps, defined once
+in a base class: create or evolve the table from the contract, read the
+source, transform, based on the contract, run the quality checks, write.
+A job only provides its contract and a <code>transform</code> function. The bronze job&rsquo;s
+<code>main.py</code> is about ten lines.</p>
+<p>Three ideas carry most of the value:</p>
+<ul>
+<li><strong>Nothing disappears silently.</strong> Rows that fail a hard check go to a
+quarantine table, with the reasons attached. Unknown fields and values that
+don&rsquo;t fit their type go to a <code>_rescued_data</code> column. When the log format
+changed, all the old-format rows showed up in quarantine, counted and
+explainable, instead of becoming nulls.</li>
+<li><strong>Schema changes are deliberate.</strong> Adding a column is allowed. Changing a
+type or dropping a column fails loudly.</li>
+<li><strong>Bronze is typed, not raw.</strong> Many lakehouses keep bronze as raw strings and
+parse in silver. I parse in bronze, against the contract, because it catches
+bad data at the door. The raw message still survives where it matters:
+anything that doesn&rsquo;t fit goes to <code>_rescued_data</code>, and Kafka keeps the
+original for its retention period.</li>
+</ul>
+<p><strong>The cost</strong> is ceremony. A new column touches a contract, sometimes two or
+three (the allowed list of apps lives in the silver contract and in every gold
+contract with an app column). Contracts are versioned and bumped on every
+change. For a one-person project this sometimes feels heavy. I still think it
+pays for itself the first time bad data shows up and you know exactly where it
+is.</p>
+<h2 id="decision-7-incremental-silver-windowed-gold">
+  Decision 7: incremental silver, windowed gold
+  <a class="heading-link" href="#decision-7-incremental-silver-windowed-gold">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><strong>Silver</strong> runs hourly and processes only what&rsquo;s new. It reads bronze as a
+Delta stream with an &ldquo;available now&rdquo; trigger: start, process every bronze
+commit since the last run, stop. Spark&rsquo;s checkpoint remembers where it was. So
+I get streaming&rsquo;s bookkeeping with batch&rsquo;s cost: no pod running between runs.
+Duplicates are removed by the Kafka partition and offset, which uniquely
+identify a message.</p>
+<p><strong>Gold</strong> is different. Its tables are aggregates (requests per hour, sessions
+per day), and late data changes yesterday&rsquo;s numbers. Every hour, gold
+<strong>rewrites the last two days</strong> of each table and leaves older days alone.
+That absorbs late rows without ever recomputing history.</p>
+<p>Gold also has a <strong>freshness gate</strong>: each table remembers which silver version
+and which code version it was built from. If neither changed, the table is
+skipped. Most hours on a quiet site, gold starts, sees nothing new, and exits.</p>
+<p>How gold gets triggered took the most thought. The options:</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Option</th>
+          <th style="text-align: left">Why not</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Eleven separate jobs, one per table</td>
+          <td style="text-align: left">Eleven pod start-ups every hour on one CPU</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Silver and gold in the same job</td>
+          <td style="text-align: left">Breaks &ldquo;one job per layer&rdquo;; one failure blocks both</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Silver starts gold when it finishes</td>
+          <td style="text-align: left">Jobs creating jobs outside Git; more permissions</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">A workflow engine (Argo Workflows)</td>
+          <td style="text-align: left">A new controller for a single dependency</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>One gold job, scheduled 15 minutes after silver, with the gate</strong></td>
+          <td style="text-align: left"><strong>Chosen</strong></td>
+      </tr>
+  </tbody>
+</table>
+<p>The cost of the chosen option: if silver runs late, gold builds from the
+previous silver version and catches up an hour later. For dashboards about web
+traffic, an extra hour of delay is fine. When a second system needs real
+dependency chains, a workflow engine will be worth it.</p>
+<h2 id="decision-8-compact-each-partition-once">
+  Decision 8: compact each partition once
+  <a class="heading-link" href="#decision-8-compact-each-partition-once">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Streaming every ten minutes and rewriting gold every hour produce many small
+files, and small files make every read slow. A nightly maintenance job runs
+Delta&rsquo;s <code>OPTIMIZE</code> (merge small files) and <code>VACUUM</code> (delete files no longer
+referenced).</p>
+<p>The first version optimized whole tables every night. That cost grows with
+every day of data, and it was mostly wasted: old partitions were already
+compact, and gold&rsquo;s last two days get rewritten an hour later anyway.</p>
+<p>Now each partition is <strong>compacted once, after it &ldquo;closes&rdquo;</strong>: the day after
+for bronze and silver, three days after for gold (after its rewrite window).
+A weekly job goes back over the last seven closed days for stragglers. The
+cost of maintenance no longer grows with the size of the table.</p>
+<p>The tradeoff: rows that arrive more than a week late stay in small files until
+I run a full compaction by hand. At this scale, that&rsquo;s an acceptable edge case.</p>
+<h2 id="decision-9-serving-with-duckdb-not-a-query-cluster">
+  Decision 9: serving with DuckDB, not a query cluster
+  <a class="heading-link" href="#decision-9-serving-with-duckdb-not-a-query-cluster">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Grafana runs on a separate machine and needs to query gold. The usual answer is
+Trino or a Spark SQL server. Both are big, always-on services, and I have one
+CPU.</p>
+<p>Gold tables are small by design, so I wrote a tiny <strong>query API</strong>: FastAPI plus
+<strong>DuckDB</strong>, which can read Delta tables straight from S3. A few design choices:</p>
+<ul>
+<li><strong>The server owns the SQL.</strong> There is no &ldquo;run this query&rdquo; endpoint. There&rsquo;s
+one route per table name, the name is checked against an allowlist, and the
+only inputs are typed parameters (date range, app, row limit). It&rsquo;s on the
+LAN with an API key, but I still didn&rsquo;t want arbitrary SQL against storage.</li>
+<li><strong>Cache keyed on the Delta version.</strong> Checking a table&rsquo;s latest version is one
+storage listing, much cheaper than a scan. If the version hasn&rsquo;t changed,
+the cached answer is still correct. Dashboards refreshing every minute cost
+almost nothing.</li>
+<li><strong>It runs on any node.</strong> The API image is built for both amd64 and arm64, so
+it can live on the arm64 node and leave the scarce amd64 CPU for Spark.</li>
+</ul>
+<p><strong>The cost:</strong> the API only knows the tables I&rsquo;ve listed, so a new gold table
+means a code change. Heavy aggregation over long ranges happens in Grafana,
+not in the API. And DuckDB&rsquo;s Delta and S3 support had some sharp edges that
+only showed up against real storage, never in local tests, which is its own
+lesson.</p>
+<h2 id="decision-10-monitor-from-the-outside">
+  Decision 10: monitor from the outside
+  <a class="heading-link" href="#decision-10-monitor-from-the-outside">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>I wanted a Telegram message when something breaks. Prometheus and
+Alertmanager already ran on another machine, so inside the cluster I added a
+lightweight <strong>Prometheus agent</strong> that scrapes cluster targets and forwards
+everything to that Prometheus.</p>
+<p><img alt="Monitoring: kube-state-metrics watches the Spark jobs, data-api reads the Delta tables; a Prometheus agent scrapes both and forwards to Prometheus on another machine, which alerts to Telegram through Alertmanager" src="monitoring.png"></p>
+<p>The interesting part is what I didn&rsquo;t do: <strong>the Spark jobs export no metrics.</strong>
+The standard approach would be for every job to push metrics to a Pushgateway.
+That means changing the shared library, republishing every job, running
+another service, and a lost push fails silently.</p>
+<p>Instead I ask two questions, each answered from outside the jobs:</p>
+<ul>
+<li><strong>Did the job run, fail, or run out of memory?</strong> kube-state-metrics already
+watches Kubernetes objects. Configured to read the spark-operator&rsquo;s custom
+resources, it reports each job&rsquo;s state and each schedule&rsquo;s last run.</li>
+<li><strong>Is the data fresh and clean?</strong> The query API already reads the lakehouse.
+It got a <code>/metrics</code> endpoint that reports, per table, the last write time,
+the newest event time, and today&rsquo;s quarantine counts. A background thread
+refreshes it every five minutes, so scrapes never touch storage. This
+measures what dashboard users actually see.</li>
+</ul>
+<p>The other important choice is <strong>freshness relative to the layer before</strong>. With
+low traffic, &ldquo;silver hasn&rsquo;t changed in two hours&rdquo; is normal at night. So only
+bronze has an absolute threshold (six hours with no new row). Silver alerts if
+it falls more than two hours behind bronze. Gold alerts if it falls more than
+two hours behind silver. A quiet night stays quiet. A broken hourly job fires.</p>
+<p><strong>The cost:</strong> I lose exact Kafka lag and job run times, which a job pushing its
+own metrics would give me. For now, &ldquo;is it running&rdquo; plus &ldquo;is the data fresh&rdquo;
+covers what I actually want to be woken up for.</p>
+<h2 id="the-tradeoffs-in-one-table">
+  The tradeoffs, in one table
+  <a class="heading-link" href="#the-tradeoffs-in-one-table">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Decision</th>
+          <th style="text-align: left">What I get</th>
+          <th style="text-align: left">What it costs</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Spark for streaming and batch</td>
+          <td style="text-align: left">One engine, one image, one deploy path</td>
+          <td style="text-align: left">Heavy for today&rsquo;s data; tight CPU budget</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">One image + wheels</td>
+          <td style="text-align: left">Releases without image builds</td>
+          <td style="text-align: left">Strict versioning and naming; no UDFs; manual wheel publish</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Contracts in the SDK</td>
+          <td style="text-align: left">Typed tables, quarantine, safe schema changes, tiny jobs</td>
+          <td style="text-align: left">Ceremony on every column change</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Incremental silver</td>
+          <td style="text-align: left">Only new data processed, no idle pod</td>
+          <td style="text-align: left">Checkpoints to care for</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Windowed gold + gate</td>
+          <td style="text-align: left">Absorbs late data, idle hours are cheap</td>
+          <td style="text-align: left">Up to an hour extra delay</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Compact closed partitions</td>
+          <td style="text-align: left">Maintenance cost stays flat</td>
+          <td style="text-align: left">Very late rows wait for a manual run</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">DuckDB query API</td>
+          <td style="text-align: left">No query cluster, cheap cached reads</td>
+          <td style="text-align: left">Every new table is a code change</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Monitoring from outside</td>
+          <td style="text-align: left">No job changes, measures what users see</td>
+          <td style="text-align: left">No Kafka lag or run times</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="what-i-learned">
+  What I learned
+  <a class="heading-link" href="#what-i-learned">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li><strong>Constraints are a design tool.</strong> One free CPU ruled out most &ldquo;standard&rdquo;
+answers (a query cluster, many small jobs, per-job images) and pushed me to
+simpler ones that I&rsquo;d probably pick again anyway.</li>
+<li><strong>Make bad data visible, not absent.</strong> Quarantine and rescued columns
+turned every data surprise into a count I could look at.</li>
+<li><strong>Design for idle time.</strong> At low traffic, most runs find nothing to do. The
+platform is cheap because &ldquo;nothing to do&rdquo; is fast everywhere.</li>
+<li><strong>Test against the real thing.</strong> Almost every serious bug only appeared
+against real object storage or the real cluster, never in local tests.</li>
+<li><strong>Spark on Kubernetes has a long tail of small things</strong> (permissions,
+network policies, node selectors, non-root users). None is hard. All of
+them are in the way the first time.</li>
+</ul>
+<h2 id="whats-next">
+  What&rsquo;s next
+  <a class="heading-link" href="#whats-next">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>Automate wheel publishing, so a release is only a merge.</li>
+<li>A multi-arch Spark image, so Spark can use the arm64 node too.</li>
+<li>Region and city for visitors, which needs Cloudflare&rsquo;s location headers in
+the log and a contract change.</li>
+<li>A second data system. That will be the real test of whether the layout, the
+SDK and the monitoring were designed well, or just designed for one case.</li>
+</ul>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2025 -
+    
+    2026
+     Carlos Zansavio 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MFNJ21GZRL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MFNJ21GZRL');
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

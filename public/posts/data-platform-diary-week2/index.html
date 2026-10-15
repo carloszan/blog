@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  My data platform diary - Week 2 · carlos zansavio
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Carlos Zansavio">
+<meta name="description" content="Let&#39;s build a data platform together">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="My data platform diary - Week 2">
+  <meta name="twitter:description" content="Let&#39;s build a data platform together">
+
+<meta property="og:url" content="http://carlos.sjdr.cloud/posts/data-platform-diary-week2/">
+  <meta property="og:site_name" content="carlos zansavio">
+  <meta property="og:title" content="My data platform diary - Week 2">
+  <meta property="og:description" content="Let&#39;s build a data platform together">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-07-18T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-07-18T00:00:00+00:00">
+    <meta property="article:tag" content="Data-Engineering">
+    <meta property="article:tag" content="My-Data-Platform">
+
+
+
+
+<link rel="canonical" href="http://carlos.sjdr.cloud/posts/data-platform-diary-week2/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.c8e4eea149ae1dc7c61ba9b0781793711a4e657f7e07a4413f9abc46d52dffc4.css" integrity="sha256-yOTuoUmuHcfGG6mweBeTcRpOZX9&#43;B6RBP5q8RtUt/8Q=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://carlos.sjdr.cloud/">
+      carlos zansavio
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://carlos.sjdr.cloud/posts/data-platform-diary-week2/">
+              My data platform diary - Week 2
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2026-07-18T00:00:00Z">
+                July 18, 2026
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              7-minute read
+            </span>
+          </div>
+          <div class="authors">
+  <i class="fa-solid fa-user" aria-hidden="true"></i>
+    <a href="/authors/carlos-zansavio/">Carlos Zansavio</a></div>
+
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/categories/data/">Data</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/data-engineering/">Data-Engineering</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/my-data-platform/">My-Data-Platform</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>Here&rsquo;s where things stood at the end of last week:</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> MinIO</li>
+<li><input checked="" disabled="" type="checkbox"> Kafka</li>
+<li><input checked="" disabled="" type="checkbox"> Stream Nginx logs into a Kafka topic</li>
+<li><input checked="" disabled="" type="checkbox"> Read the streaming data locally and process it</li>
+<li><input disabled="" type="checkbox"> Plan the deploy</li>
+</ul>
+<p>Later:</p>
+<ul>
+<li><input disabled="" type="checkbox"> Catalog</li>
+<li><input disabled="" type="checkbox"> Trino</li>
+<li><input disabled="" type="checkbox"> Metabase</li>
+</ul>
+<h2 id="day-1--laying-out-the-repo">
+  Day 1 — Laying out the repo
+  <a class="heading-link" href="#day-1--laying-out-the-repo">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Time to actually start coding. Before writing a single job, I needed to figure out how the repository should be structured — something that could scale in more than one direction without becoming a mess. I also wanted a proper dev environment to test code in before it ever touches the cluster, so I&rsquo;m setting up a devcontainer with a Spark instance for that.</p>
+<p>This is a one-person operation, so a monorepo just makes sense. Everything lives together, which means less friction for me day to day. Splitting things into separate repos is a problem for future-me, if it ever becomes one.</p>
+<p>After a couple of hours going back and forth on layouts, here&rsquo;s where I landed:</p>
+<pre tabindex="0"><code>├── .devcontainer
+├── docs
+├── infra
+├── spark-image
+├── spark-jobs-src
+│   ├── nginx-stream
+│   │   ├── nginx_stream
+│   │   ├── nginx_stream.egg-info
+│   │   └── tests
+│   └── silver-nginx
+│       ├── silver_nginx
+│       └── silver_nginx.egg-info
+├── spark-manifests
+│   ├── batch
+│   └── streaming
+└── spark-sdk
+    ├── spark_sdk
+    ├── spark_sdk.egg-info
+    └── tests
+</code></pre><ul>
+<li><strong><code>infra/</code></strong> — platform infrastructure: <code>bootstrap/</code> (applied once, manually, before ArgoCD can take over anything else — namespaces, quotas, priority classes, AppProjects, the root app-of-apps Application, baseline NetworkPolicies), <code>apps/</code> (the ArgoCD Applications that make up the app-of-apps ArgoCD watches continuously), and <code>spark-operator/</code> (Spark Operator Helm values plus supplementary RBAC manifests). No Spark applications live here.</li>
+<li><strong><code>spark-image/</code></strong> — the generic Spark runtime image: Spark, Delta, the Kafka connector jars, and the runtime launcher. No business logic, long-lived, updated infrequently.</li>
+<li><strong><code>spark-sdk/</code></strong> — a shared Python library (Kafka/Delta utilities, logging, metrics, config, base job classes) that every application package pulls from.</li>
+<li><strong><code>spark-jobs-src/</code></strong> — the actual business logic. Each application is its own Python package, built to a wheel by CI and published to MinIO. No Docker image rebuilds for application-only changes.</li>
+<li><strong><code>spark-manifests/</code></strong> — the <code>SparkApplication</code> manifests. Bumping a version is just a Git edit; ArgoCD reconciles the cluster from there.</li>
+<li><strong><code>docs/runbooks/</code></strong> — VM-side procedures (MinIO, mainly) documented with the same rigor as the manifests, since the cluster isn&rsquo;t fully rebuildable from Git alone.</li>
+<li><strong><code>docs/decisions/</code></strong> — lightweight ADRs for the open decisions I make along the way.</li>
+</ul>
+<p>All the development happens inside the devcontainer Spark instance from here on.</p>
+<h2 id="day-2--dns-offsets-and-a-working-local-stream">
+  Day 2 — DNS, offsets, and a working local stream
+  <a class="heading-link" href="#day-2--dns-offsets-and-a-working-local-stream">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Before going further, I needed to register the Kafka domain on my internal network — it was still a raw IP, which isn&rsquo;t great practice. Added a DNS record and updated the Fluent Bit config to match.</p>
+<p>While I was in there, I ran into something worth flagging: when Fluent Bit crashes or restarts, it loses track of its log offset. Without persisting that state, a restart means either replaying logs or silently dropping them. The fix is simple enough — point it at a SQLite DB to track state across restarts:</p>
+<pre tabindex="0"><code>[INPUT]
+	DB /var/log/flb/nginx-access.db
+	DB.Sync Normal
+</code></pre><p>With that sorted, I went back to the code. Had to untangle a few devcontainer config issues, but once that was fixed I got a notebook running that consumes the stream locally, pointing at the Kafka broker running outside the container:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="n">DataFrame</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">spark_sdk.base</span> <span class="kn">import</span> <span class="n">BaseStreamingJob</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">spark_sdk.kafka</span> <span class="kn">import</span> <span class="n">read_stream</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="n">raw</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">raw</span><span class="o">.</span><span class="n">selectExpr</span><span class="p">(</span><span class="s2">&#34;CAST(value AS STRING) AS raw_log&#34;</span><span class="p">,</span> <span class="s2">&#34;timestamp&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">NginxStreamJob</span><span class="p">(</span><span class="n">BaseStreamingJob</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app_name</span> <span class="o">=</span> <span class="s2">&#34;nginx-stream&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">start_stream</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">raw</span> <span class="o">=</span> <span class="n">read_stream</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">spark</span><span class="p">,</span> <span class="s2">&#34;x.y.z.a:9092&#34;</span><span class="p">,</span> <span class="s2">&#34;nginx-access-logs&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="n">parse</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span><span class="o">.</span><span class="n">writeStream</span>
+</span></span><span class="line"><span class="cl">          <span class="o">.</span><span class="n">outputMode</span><span class="p">(</span><span class="s1">&#39;append&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;console&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s1">&#39;truncate&#39;</span><span class="p">,</span> <span class="s1">&#39;false&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s1">&#39;numRows&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="o">.</span><span class="n">trigger</span><span class="p">(</span><span class="n">processingTime</span><span class="o">=</span><span class="s2">&#34;5 seconds&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">NginxStreamJob</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</span></span></code></pre></div><p>The common library lives in <code>spark_sdk</code>, and I&rsquo;ll keep growing it alongside whatever job needs it next.</p>
+<p>Ran it, and the topic started flowing straight into the console output:</p>
+<pre tabindex="0"><code>26/07/19 16:10:15 WARN SparkSession: Using an existing Spark session; only runtime SQL configurations will take effect. 26/07/19 16:10:15 WARN ResolveWriteToStream: Temporary checkpoint location created which is deleted normally when the query didn&#39;t fail: /tmp/temporary-5c0bed23-b9e3-44a2-9a64-a43edef5e35d. If it&#39;s required to delete it under any circumstances, please set spark.sql.streaming.forceDeleteTempCheckpointLocation to true. Important to know deleting temp checkpoint folder is best effort. 26/07/19 16:10:15 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled. 26/07/19 16:10:16 WARN AdminClientConfig: These configurations &#39;[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]&#39; were supplied but are not used yet.
+
+------------------------------------------- Batch: 0 ------------------------------------------- +-------+---------+ |raw_log|timestamp| +-------+---------+ +-------+---------+
+
+------------------------------------------- Batch: 1 ------------------------------------------- +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+ |raw_log |timestamp | +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+ |{&#34;time&#34;:1784477440.0,&#34;remote_addr&#34;:&#34;104.23.254.53&#34;,&#34;request_method&#34;:&#34;GET&#34;,&#34;request_uri&#34;:&#34;/.well-known/security.txt&#34;,&#34;status&#34;:200,&#34;body_bytes_sent&#34;:12167,&#34;request_time&#34;:0.002,&#34;upstream_response_time&#34;:&#34;0.002&#34;,&#34;http_referer&#34;:&#34;&#34;,&#34;http_user_agent&#34;:&#34;Hello from Palo Alto Networks, find out more about our scans in [https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity](https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity)&#34;,&#34;host&#34;:&#34;sjdr.cloud&#34;}|2026-07-19 16:10:40.562| +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+</code></pre><p>Everything&rsquo;s working end to end. Next up:</p>
+<ul>
+<li><input disabled="" type="checkbox"> Sink to MinIO instead of console</li>
+<li><input disabled="" type="checkbox"> Write unit tests for this code</li>
+<li><input disabled="" type="checkbox"> Deploy to K8s (this is the part I&rsquo;m a little nervous about)</li>
+</ul>
+<h2 id="day-3--fixing-the-ip-problem">
+  Day 3 — Fixing the IP problem
+  <a class="heading-link" href="#day-3--fixing-the-ip-problem">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Before pushing ahead with the MinIO sink, there was one thing worth fixing first: the IP address showing up in the logs was Cloudflare&rsquo;s, not the visitor&rsquo;s. Given I already had plans for later analysis, that wasn&rsquo;t going to cut it — I need the real client IP.</p>
+<p>Cloudflare has a <a href="https://developers.cloudflare.com/support/troubleshooting/restoring-visitor-ips/restoring-original-visitor-ips"  class="external-link" target="_blank" rel="noopener">document on restoring the original visitor IP</a> that pointed me in the right direction. Updated the Nginx log format to pull it out of the <code>CF-Connecting-IP</code> header:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="k">log_format</span> <span class="s">json_combined</span> <span class="s">escape=json</span>
+</span></span><span class="line"><span class="cl">  <span class="s">&#39;</span><span class="p">{</span><span class="kn">&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;&#34;time&#34;:&#34;</span><span class="nv">$time_iso8601&#34;,&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;&#34;client_ip&#34;:&#34;</span><span class="nv">$http_cf_connecting_ip&#34;,&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;&#34;remote_addr&#34;:&#34;</span><span class="nv">$remote_addr&#34;,&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;&#34;request_method&#34;:&#34;</span><span class="nv">$request_method&#34;,&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;&#34;request_uri&#34;:&#34;</span><span class="nv">$request_uri&#34;,&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;&#34;status&#34;:</span><span class="nv">$status,&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;&#34;body_bytes_sent&#34;:</span><span class="nv">$body_bytes_sent,&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;&#34;request_time&#34;:</span><span class="nv">$request_time,&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;&#34;upstream_response_time&#34;:&#34;</span><span class="nv">$upstream_response_time&#34;,&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;&#34;http_referer&#34;:&#34;</span><span class="nv">$http_referer&#34;,&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;&#34;http_user_agent&#34;:&#34;</span><span class="nv">$http_user_agent&#34;,&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;&#34;host&#34;:&#34;</span><span class="nv">$host&#34;&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="s">&#39;</span><span class="err">}</span><span class="s">&#39;</span><span class="p">;</span>
+</span></span></code></pre></div><p><code>client_ip</code> now pulls straight from that header. Nothing needed to change on the Fluent Bit side — it just tails the log file into Kafka regardless of what&rsquo;s in it. From here on, any analysis will be working off real visitor IPs.</p>
+<h2 id="day-4--sinking-to-minio">
+  Day 4 — Sinking to MinIO
+  <a class="heading-link" href="#day-4--sinking-to-minio">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Today&rsquo;s job was swapping the console sink for a real one: MinIO. Started from the code I already had and built on top of it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="n">DataFrame</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">spark_sdk.base</span> <span class="kn">import</span> <span class="n">BaseStreamingJob</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">spark_sdk.kafka</span> <span class="kn">import</span> <span class="n">read_stream</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">spark_sdk.delta</span> <span class="kn">import</span> <span class="n">BRONZE</span><span class="p">,</span> <span class="n">table_path</span><span class="p">,</span> <span class="n">write_stream</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">spark_sdk.kafka</span> <span class="kn">import</span> <span class="n">checkpoint_path</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">spark_sdk.config</span> <span class="kn">import</span> <span class="n">require_env</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="n">raw</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">raw</span><span class="o">.</span><span class="n">selectExpr</span><span class="p">(</span><span class="s2">&#34;CAST(value AS STRING) AS raw_log&#34;</span><span class="p">,</span> <span class="s2">&#34;timestamp&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">NginxStreamJob</span><span class="p">(</span><span class="n">BaseStreamingJob</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app_name</span> <span class="o">=</span> <span class="s2">&#34;nginx-stream&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">start_stream</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">bucket</span> <span class="o">=</span> <span class="n">require_env</span><span class="p">(</span><span class="s2">&#34;LAKEHOUSE_BUCKET&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">raw</span> <span class="o">=</span> <span class="n">read_stream</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">spark</span><span class="p">,</span> <span class="s2">&#34;kafka.home.sjdr.cloud:9092&#34;</span><span class="p">,</span> <span class="s2">&#34;nginx-access-logs&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">write_stream</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">parse</span><span class="p">(</span><span class="n">raw</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">table_path</span><span class="p">(</span><span class="n">bucket</span><span class="p">,</span> <span class="n">BRONZE</span><span class="p">,</span> <span class="s2">&#34;nginx_logs&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">checkpoint_path</span><span class="p">(</span><span class="n">bucket</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">app_name</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span></code></pre></div><p>First run threw this at me:</p>
+<pre tabindex="0"><code>IllegalArgumentException: bucket is null/empty
+</code></pre><p>Turned out Spark simply couldn&rsquo;t see S3 yet. MinIO Community Edition doesn&rsquo;t expose a way to create per-user credentials through code, so I had to go into the console and manually create keys for the Spark user. Once that was done, it worked — I could watch the data landing in the bucket in real time.</p>
+<p>Filed away for later: this is already producing a lot of small files, and that&rsquo;s going to need fixing before it becomes a real problem. Deployment is next, and I suspect it&rsquo;ll be the hardest part of this whole project so far.</p>
+<h2 id="day-5--getting-ready-to-deploy">
+  Day 5 — Getting ready to deploy
+  <a class="heading-link" href="#day-5--getting-ready-to-deploy">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Where things stood going in:</p>
+<ul>
+<li>A notebook to test the SDK and the streaming code</li>
+<li>A notebook to query and analyze the data that&rsquo;s landed so far</li>
+</ul>
+<p>Time to move this out of my laptop and into production — the first deployment of its kind on this platform, so there was no existing playbook to lean on.</p>
+<p>The plan is to keep using the same container image (<code>spark-image</code>) without rebuilding it per change, and instead have it pull the Python package it needs from the bucket. That means the bucket now carries three jobs:</p>
+<ul>
+<li>Delta Lake storage</li>
+<li>Checkpoints and commits for structured streaming</li>
+<li>Python wheel packages</li>
+</ul>
+<p>Building the wheel is straightforward with <code>uv</code>:</p>
+<pre tabindex="0"><code>uv build
+</code></pre><p>That drops the <code>.whl</code> into <code>/dist</code>. For now I&rsquo;m deploying it manually — copying the wheel straight into the MinIO bucket — and I&rsquo;ll wire up CI/CD for this later.</p>
+<p>First snag: the <code>nginx-stream</code> container came up without <code>spark-sdk</code> installed:</p>
+<pre tabindex="0"><code>No module named &#39;spark_sdk&#39;
+</code></pre><p>Made sense — there was nowhere for it to pull that package from yet. Built the <code>spark_sdk</code> wheel and uploaded it to an <code>artifacts</code> path inside the <code>lakehouse</code> bucket alongside everything else.</p>
+<p>With that in place, it&rsquo;s finally working end to end from my machine: streaming logs in, landing straight into Delta Lake on the <code>lakehouse</code> bucket.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2025 -
+    
+    2026
+     Carlos Zansavio 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MFNJ21GZRL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MFNJ21GZRL');
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

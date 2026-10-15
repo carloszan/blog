@@ -74,6 +74,7 @@ After backing everything up, I added this to `/data/nginx/custom/http_top.conf`:
 log_format json_combined escape=json
   '{'
     '"time":"$time_iso8601",'
+    '"client_ip":"$http_cf_connecting_ip",'
     '"remote_addr":"$remote_addr",'
     '"request_method":"$request_method",'
     '"request_uri":"$request_uri",'

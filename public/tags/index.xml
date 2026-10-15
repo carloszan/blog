@@ -1,45 +1,117 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Tags on carlos zansavio</title>
-		<link>http://carlos.sjdr.cloud/tags/</link>
-		<description>Recent content in Tags on carlos zansavio</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Sat, 18 Jul 2026 00:00:00 +0000</lastBuildDate>
-		
-			<atom:link href="http://carlos.sjdr.cloud/tags/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Data-Engineering</title>
-				<link>http://carlos.sjdr.cloud/tags/data-engineering/</link>
-				<pubDate>Sat, 18 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://carlos.sjdr.cloud/tags/data-engineering/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>My-Data-Platform</title>
-				<link>http://carlos.sjdr.cloud/tags/my-data-platform/</link>
-				<pubDate>Sat, 18 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://carlos.sjdr.cloud/tags/my-data-platform/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Exercise</title>
-				<link>http://carlos.sjdr.cloud/tags/exercise/</link>
-				<pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://carlos.sjdr.cloud/tags/exercise/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Software</title>
-				<link>http://carlos.sjdr.cloud/tags/software/</link>
-				<pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-				<guid>http://carlos.sjdr.cloud/tags/software/</guid>
-				<description></description>
-			</item>
-	</channel>
+  <channel>
+    <title>Tags on carlos zansavio</title>
+    <link>http://carlos.sjdr.cloud/tags/</link>
+    <description>Recent content in Tags on carlos zansavio</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 14 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://carlos.sjdr.cloud/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Argocd</title>
+      <link>http://carlos.sjdr.cloud/tags/argocd/</link>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://carlos.sjdr.cloud/tags/argocd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Delta-Lake</title>
+      <link>http://carlos.sjdr.cloud/tags/delta-lake/</link>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://carlos.sjdr.cloud/tags/delta-lake/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Duckdb</title>
+      <link>http://carlos.sjdr.cloud/tags/duckdb/</link>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://carlos.sjdr.cloud/tags/duckdb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gitops</title>
+      <link>http://carlos.sjdr.cloud/tags/gitops/</link>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://carlos.sjdr.cloud/tags/gitops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>K3s</title>
+      <link>http://carlos.sjdr.cloud/tags/k3s/</link>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://carlos.sjdr.cloud/tags/k3s/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kafka</title>
+      <link>http://carlos.sjdr.cloud/tags/kafka/</link>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://carlos.sjdr.cloud/tags/kafka/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kubernetes</title>
+      <link>http://carlos.sjdr.cloud/tags/kubernetes/</link>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://carlos.sjdr.cloud/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Minio</title>
+      <link>http://carlos.sjdr.cloud/tags/minio/</link>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://carlos.sjdr.cloud/tags/minio/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Prometheus</title>
+      <link>http://carlos.sjdr.cloud/tags/prometheus/</link>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://carlos.sjdr.cloud/tags/prometheus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spark</title>
+      <link>http://carlos.sjdr.cloud/tags/spark/</link>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://carlos.sjdr.cloud/tags/spark/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>System-Design</title>
+      <link>http://carlos.sjdr.cloud/tags/system-design/</link>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://carlos.sjdr.cloud/tags/system-design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data-Engineering</title>
+      <link>http://carlos.sjdr.cloud/tags/data-engineering/</link>
+      <pubDate>Sat, 18 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://carlos.sjdr.cloud/tags/data-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>My-Data-Platform</title>
+      <link>http://carlos.sjdr.cloud/tags/my-data-platform/</link>
+      <pubDate>Sat, 18 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://carlos.sjdr.cloud/tags/my-data-platform/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Exercise</title>
+      <link>http://carlos.sjdr.cloud/tags/exercise/</link>
+      <pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://carlos.sjdr.cloud/tags/exercise/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software</title>
+      <link>http://carlos.sjdr.cloud/tags/software/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://carlos.sjdr.cloud/tags/software/</guid>
+      <description></description>
+    </item>
+  </channel>
 </rss>
